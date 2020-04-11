@@ -12,14 +12,14 @@ class MainWindow(QMainWindow):
         # Be sure to call the super class method
         QMainWindow.__init__(self)
  
-        self.setMinimumSize(QSize(480, 80))
-        self.setMaximumSize(QSize(480, 80))
+        self.setMinimumSize(QSize(480, 160))
+        self.setMaximumSize(QSize(480, 160))
         self.setWindowTitle("Newman-Simracing Telemetry-Logger")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
         self.textEdit_debug = QTextEdit(central_widget)
-        self.textEdit_debug.setGeometry(QRect(0, 0, 480, 80))
+        self.textEdit_debug.setGeometry(QRect(0, 0, 480, 160))
         self.textEdit_debug.setObjectName("textEdit_debug")
 
         self.setWindowIcon(QIcon(QPixmap(':icons/newman-icon.png')))
