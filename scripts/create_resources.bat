@@ -1,0 +1,1 @@
+pyrcc5 res\newman_res.qrc -o res\newman_res.py

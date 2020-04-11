@@ -1,0 +1,1 @@
+pyinstaller -i "res\newman-icon.ico" -n "NSRTL" --onefile --noconsole main.py
