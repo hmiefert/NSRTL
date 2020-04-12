@@ -1,1 +1,1 @@
-pyinstaller -i "res\newman-icon.ico" -n "NSRTL" --onefile --noconsole main.py
+pyinstaller -i "res\newman-icon.ico" -n "NSRTL" --hidden-import="PyQt5.QtNetwork" --onefile --noconsole main.py

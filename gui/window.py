@@ -8,10 +8,8 @@ import res.newman_res
 class MainWindow(QMainWindow):
     tray_icon = None
  
-    # Override the class constructor
-    def __init__(self):
-        # Be sure to call the super class method
-        QMainWindow.__init__(self)
+    def __init__(self, *args):
+        QMainWindow.__init__(self, *args)
  
         self.setMinimumSize(QSize(800, 600))
         self.setMaximumSize(QSize(800, 600))
@@ -31,10 +29,8 @@ class MainWindow(QMainWindow):
 
         self.setWindowIcon(QIcon(QPixmap(':icons/newman-icon.png')))
 
-        # Init QSystemTrayIcon
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(QIcon(QPixmap(':icons/newman-icon.png')))
-        # self.tray_icon.setIcon(self.style().standardIcon(QStyle.SP_ComputerIcon))
 
         show_action = QAction("Show", self)
         quit_action = QAction("Quit", self)
