@@ -44,6 +44,8 @@ class MainWindow(QMainWindow):
         tray_menu.addAction(quit_action)
 
         self.ws = WSClient(self)
+        self.ws.websocket_url = "ws://localhost:8080"
+        self.ws.websocket_token = "aVerySecureToken"
         # self.db = JsonStorage()
 
         self.ir_thread = Telemetry()

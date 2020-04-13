@@ -14,5 +14,18 @@ if __name__ == "__main__":
     # APP
     app = QApplication(sys.argv)
     mw = MainWindow()
+
+    # get URL and Token from registry
+    try:
+        nsrtl = reg.OpenKey(reg.HKEY_CURRENT_USER, 'Software\\NSRTL', 0, reg.KEY_READ)
+        nsrtl_url = reg.QueryValueEx(nsrtl, 'URL')
+        nsrtl_token = reg.QueryValueEx(nsrtl, 'TOKEN')
+    except FileNotFoundError:
+        nsrtl_url = ''
+        nsrtl_token = ''
+    else:
+        mw.ws.websocket_url = nsrtl_url[0]
+        mw.ws.websocket_token = nsrtl_token[0]
+
     mw.close()
     sys.exit(app.exec())

@@ -11,6 +11,8 @@ class WSClient(QObject):
         self.client.connected.connect(self.onConnected)
         self.message_queue = []
         self.is_connected = False
+        self.websocket_url = "ws://localhost:8080"
+        self.websocket_token = "aVerySecureToken"
         
         self.timer_reconnect = QTimer(parent)
         self.timer_reconnect.start(30000)
@@ -33,9 +35,10 @@ class WSClient(QObject):
     def send_message(self):
         if self.is_connected and len(self.message_queue) > 0:
             message = self.message_queue.pop(0)
+            message['token'] = self.websocket_token
             if self.client.sendTextMessage(dumps(message)) <= 0:
                 self.message_queue.append(message)  
 
     def reconnect(self):
         if self.is_connected == False:
-            self.client.open(QUrl("ws://localhost:8080"))
+            self.client.open(QUrl(self.websocket_url))
