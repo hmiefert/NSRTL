@@ -2,7 +2,7 @@ from datetime import datetime
 from PyQt5.QtWidgets import QMainWindow, QWidget, QTextEdit, QSystemTrayIcon, QAction, QStyle, qApp, QMenu
 from PyQt5.QtCore import QRect, QSize
 from PyQt5.QtGui import QPixmap, QIcon
-from svc.database import JsonStorage
+# from svc.database import JsonStorage
 from svc.telemetry import Telemetry
 from svc.wsclient import WSClient
 import res.newman_res
@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
         tray_menu.addAction(quit_action)
 
         self.ws = WSClient(self)
-        self.db = JsonStorage()
+        # self.db = JsonStorage()
 
         self.ir_thread = Telemetry()
         self.ir_thread.timeout = 0.25
@@ -68,27 +68,30 @@ class MainWindow(QMainWindow):
 
         if 'weekend_info' in signal:
             self.textEdit_debug.append(fnow + ": " + signal['message'])
-            self.db.insert_weekend_info(signal)
+            # self.db.insert_weekend_info(signal)
+            self.ws.queue_message(signal)
             
         if 'session_info' in signal:
             self.textEdit_debug.append(fnow + ": " + signal['message'])
-            self.db.insert_session_info(signal)
+            # self.db.insert_session_info(signal)
+            self.ws.queue_message(signal)
 
         if 'weather_info' in signal:
             self.textEdit_debug.append(fnow + ": " + signal['message'])
-            self.db.insert_weather_info(signal)
+            # self.db.insert_weather_info(signal)
+            self.ws.queue_message(signal)
 
         if 'driver_info' in signal:
             self.textEdit_debug.append(fnow + ": " + signal['message'])
-            self.db.insert_driver_info(signal)
+            # self.db.insert_driver_info(signal)
+            self.ws.queue_message(signal)
 
         if 'pit_settings_info' in signal:
             self.textEdit_debug.append(fnow + ": " + signal['message'])
-            self.db.insert_pit_settings_info(signal)
+            # self.db.insert_pit_settings_info(signal)
+            self.ws.queue_message(signal)
 
         self.textEdit_debug.verticalScrollBar().setValue(self.textEdit_debug.verticalScrollBar().maximum())
-
-        # self.ws.send_message(signal)
 
     def closeEvent(self, event):
         event.ignore()
