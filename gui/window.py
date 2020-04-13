@@ -1,6 +1,8 @@
+from datetime import datetime
 from PyQt5.QtWidgets import QMainWindow, QWidget, QTextEdit, QSystemTrayIcon, QAction, QStyle, qApp, QMenu
 from PyQt5.QtCore import QRect, QSize
 from PyQt5.QtGui import QPixmap, QIcon
+from svc.database import JsonStorage
 from svc.telemetry import Telemetry
 from svc.wsclient import WSClient
 import res.newman_res
@@ -11,19 +13,19 @@ class MainWindow(QMainWindow):
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
  
-        self.setMinimumSize(QSize(800, 600))
-        self.setMaximumSize(QSize(800, 600))
+        self.setMinimumSize(QSize(1200, 800))
+        self.setMaximumSize(QSize(1200, 800))
         self.setWindowTitle("Newman-Simracing Telemetry-Logger")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
         self.textEdit_session_info = QTextEdit(central_widget)
-        self.textEdit_session_info.setGeometry(QRect(0, 0, 800, 200))
+        self.textEdit_session_info.setGeometry(QRect(0, 0, 1200, 250))
         self.textEdit_session_info.setObjectName("textEdit_session_info")
         self.textEdit_session_info.setReadOnly(True)
 
         self.textEdit_debug = QTextEdit(central_widget)
-        self.textEdit_debug.setGeometry(QRect(0, 200, 800, 600))
+        self.textEdit_debug.setGeometry(QRect(0, 250, 1200, 550))
         self.textEdit_debug.setObjectName("textEdit_debug")
         self.textEdit_debug.setReadOnly(True)
 
@@ -42,9 +44,15 @@ class MainWindow(QMainWindow):
         tray_menu.addAction(quit_action)
 
         self.ws = WSClient(self)
+        self.db = JsonStorage()
 
         self.ir_thread = Telemetry()
-        self.ir_thread.timeout = 0.5
+        self.ir_thread.timeout = 0.25
+        self.ir_thread.weekend_info_update_rate = 60
+        self.ir_thread.session_info_update_rate = 10
+        self.ir_thread.weather_info_update_rate = 60
+        self.ir_thread.drivers_info_update_rate = 10
+        self.ir_thread.pit_settings_info_update_rate = 10
         self.ir_thread.signal.connect(self.recieve_signal)
         self.ir_thread.start()
 
@@ -52,18 +60,35 @@ class MainWindow(QMainWindow):
         self.tray_icon.show()
 
     def recieve_signal(self, signal):
-        if type(signal) == str:
-            self.ws.send_message(signal)
-            self.textEdit_debug.append(signal)
-            self.textEdit_debug.verticalScrollBar().setValue(self.textEdit_debug.verticalScrollBar().maximum())
+        now = datetime.now()
+        fnow = now.strftime("%Y-%m-%d %H:%M:%S")
+        
+        if 'pyirsdk' in signal:
+            self.textEdit_debug.append(fnow + ": Telemetry Status -> " + signal['pyirsdk'])
 
-        if type(signal) == dict:
-            output = ""
-            for key, val in signal.items():
-                item = key + ": " + val + "\n"
-                output += item
-                self.ws.send_message(item)
-            self.textEdit_session_info.setText(output)
+        if 'weekend_info' in signal:
+            self.textEdit_debug.append(fnow + ": " + signal['message'])
+            self.db.insert_weekend_info(signal)
+            
+        if 'session_info' in signal:
+            self.textEdit_debug.append(fnow + ": " + signal['message'])
+            self.db.insert_session_info(signal)
+
+        if 'weather_info' in signal:
+            self.textEdit_debug.append(fnow + ": " + signal['message'])
+            self.db.insert_weather_info(signal)
+
+        if 'driver_info' in signal:
+            self.textEdit_debug.append(fnow + ": " + signal['message'])
+            self.db.insert_driver_info(signal)
+
+        if 'pit_settings_info' in signal:
+            self.textEdit_debug.append(fnow + ": " + signal['message'])
+            self.db.insert_pit_settings_info(signal)
+
+        self.textEdit_debug.verticalScrollBar().setValue(self.textEdit_debug.verticalScrollBar().maximum())
+
+        # self.ws.send_message(signal)
 
     def closeEvent(self, event):
         event.ignore()

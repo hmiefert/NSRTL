@@ -18,20 +18,20 @@ WeekendInfo:
  TrackDirection: neutral
  TrackWeatherType: Generated / Dynamic Sky
  TrackSkies: Mostly Cloudy
- TrackSurfaceTemp: 18.29 C
- TrackAirTemp: 18.29 C
+ TrackSurfaceTemp: 24.33 C
+ TrackAirTemp: 18.33 C
  TrackAirPressure: 27.78 Hg
- TrackWindVel: 4.50 m/s
- TrackWindDir: 3.61 rad
- TrackRelativeHumidity: 51 %
+ TrackWindVel: 3.15 m/s
+ TrackWindDir: 3.58 rad
+ TrackRelativeHumidity: 49 %
  TrackFogLevel: 0 %
- TrackCleanup: 1
+ TrackCleanup: 0
  TrackDynamicTrack: 1
  TrackVersion: 2020.02.18.01
  SeriesID: 0
  SeasonID: 0
- SessionID: 129007300
- SubSessionID: 31699281
+ SessionID: 129114294
+ SubSessionID: 31740598
  LeagueID: 0
  Official: 0
  RaceWeek: 0
@@ -43,19 +43,19 @@ WeekendInfo:
  MaxDrivers: 1
  DCRuleSet: None
  QualifierMustStartRace: 0
- NumCarClasses: 6
- NumCarTypes: 8
+ NumCarClasses: 4
+ NumCarTypes: 7
  HeatRacing: 0
  BuildType: Release
  BuildTarget: Members
  BuildVersion: 2020.04.08.02
  WeekendOptions:
-  NumStarters: 55
+  NumStarters: 62
   StartingGrid: single file
   QualifyScoring: best lap
-  CourseCautions: full
-  StandingStart: 1
-  Restarts: single file
+  CourseCautions: local
+  StandingStart: 0
+  Restarts: double file lapped cars behind
   WeatherType: Generated / Dynamic Sky
   Skies: Partly Cloudy
   WindDirection: N
@@ -63,8 +63,8 @@ WeekendInfo:
   WeatherTemp: 25.56 C
   RelativeHumidity: 55 %
   FogLevel: 0 %
-  TimeOfDay: 10:47 pm
-  Date: 2020-05-15
+  TimeOfDay: 6:00 pm
+  Date: 2020-04-25
   EarthRotationSpeedupFactor: 1
   Unofficial: 1
   CommercialMode: consumer
@@ -72,7 +72,7 @@ WeekendInfo:
   IsFixedSetup: 0
   StrictLapsChecking: default
   HasOpenRegistration: 1
-  HardcoreLevel: 1
+  HardcoreLevel: 0
   NumJokerLaps: 0
   IncidentLimit: unlimited
   FastRepairsLimit: unlimited
@@ -84,10 +84,10 @@ SessionInfo:
  Sessions:
  - SessionNum: 0
    SessionLaps: unlimited
-   SessionTime: 21600.0000 sec
+   SessionTime: 7200.0000 sec
    SessionNumLapsToAvg: 0
    SessionType: Practice
-   SessionTrackRubberState: moderately low usage
+   SessionTrackRubberState: maximum usage
    SessionName: PRACTICE
    SessionSubType: 
    SessionSkipped: 0
@@ -95,12 +95,417 @@ SessionInfo:
    ResultsPositions:
    - Position: 1
      ClassPosition: 0
-     CarIdx: 1
+     CarIdx: 26
+     Lap: 4
+     Time: 491.0438
+     FastestLap: 4
+     FastestTime: 491.0438
+     LastTime: 491.0438
+     LapsLed: 0
+     LapsComplete: 4
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 2
+     ClassPosition: 1
+     CarIdx: 14
+     Lap: 3
+     Time: 491.4299
+     FastestLap: 3
+     FastestTime: 491.4299
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 4
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 3
+     ClassPosition: 2
+     CarIdx: 24
+     Lap: 3
+     Time: 491.5200
+     FastestLap: 3
+     FastestTime: 491.5200
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 4
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 4
+     ClassPosition: 3
+     CarIdx: 51
      Lap: 1
-     Time: 552.5053
+     Time: 493.9090
      FastestLap: 1
-     FastestTime: 552.5053
-     LastTime: 552.5053
+     FastestTime: 493.9090
+     LastTime: 493.9090
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 5
+     ClassPosition: 4
+     CarIdx: 23
+     Lap: 2
+     Time: 495.7606
+     FastestLap: 2
+     FastestTime: 495.7606
+     LastTime: 495.7606
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 6
+     ClassPosition: 5
+     CarIdx: 16
+     Lap: 2
+     Time: 496.5561
+     FastestLap: 2
+     FastestTime: 496.5561
+     LastTime: 500.3511
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 7
+     ClassPosition: 6
+     CarIdx: 33
+     Lap: 1
+     Time: 497.6921
+     FastestLap: 1
+     FastestTime: 497.6921
+     LastTime: 497.6921
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 8
+     ClassPosition: 7
+     CarIdx: 18
+     Lap: 3
+     Time: 498.5601
+     FastestLap: 3
+     FastestTime: 498.5601
+     LastTime: 498.5601
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 9
+     ClassPosition: 8
+     CarIdx: 39
+     Lap: 1
+     Time: 498.9989
+     FastestLap: 1
+     FastestTime: 498.9989
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 10
+     ClassPosition: 9
+     CarIdx: 6
+     Lap: 1
+     Time: 499.0249
+     FastestLap: 1
+     FastestTime: 499.0249
+     LastTime: 499.0249
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 11
+     ClassPosition: 10
+     CarIdx: 17
+     Lap: 3
+     Time: 499.0899
+     FastestLap: 3
+     FastestTime: 499.0899
+     LastTime: 499.0899
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 12
+     ClassPosition: 11
+     CarIdx: 1
+     Lap: 3
+     Time: 500.2610
+     FastestLap: 3
+     FastestTime: 500.2610
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 4
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 13
+     ClassPosition: 12
+     CarIdx: 21
+     Lap: 1
+     Time: 501.2421
+     FastestLap: 1
+     FastestTime: 501.2421
+     LastTime: 502.2773
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 14
+     ClassPosition: 13
+     CarIdx: 47
+     Lap: 2
+     Time: 502.4957
+     FastestLap: 2
+     FastestTime: 502.4957
+     LastTime: 502.4957
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 15
+     ClassPosition: 14
+     CarIdx: 46
+     Lap: 1
+     Time: 502.6791
+     FastestLap: 1
+     FastestTime: 502.6791
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 16
+     ClassPosition: 15
+     CarIdx: 15
+     Lap: 2
+     Time: 504.8364
+     FastestLap: 2
+     FastestTime: 504.8364
+     LastTime: 504.8364
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 17
+     ClassPosition: 16
+     CarIdx: 36
+     Lap: 1
+     Time: 510.0075
+     FastestLap: 1
+     FastestTime: 510.0075
+     LastTime: -1.0000
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 18
+     ClassPosition: 0
+     CarIdx: 19
+     Lap: 4
+     Time: 510.9255
+     FastestLap: 4
+     FastestTime: 510.9255
+     LastTime: 510.9255
+     LapsLed: 0
+     LapsComplete: 4
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 19
+     ClassPosition: 17
+     CarIdx: 5
+     Lap: 1
+     Time: 518.6328
+     FastestLap: 1
+     FastestTime: 518.6328
+     LastTime: 518.6328
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 20
+     ClassPosition: 1
+     CarIdx: 3
+     Lap: 1
+     Time: 522.3967
+     FastestLap: 1
+     FastestTime: 522.3967
+     LastTime: 522.3967
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 21
+     ClassPosition: 0
+     CarIdx: 48
+     Lap: 2
+     Time: 530.8030
+     FastestLap: 2
+     FastestTime: 530.8030
+     LastTime: 530.8030
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 22
+     ClassPosition: 2
+     CarIdx: 52
+     Lap: 1
+     Time: 531.5517
+     FastestLap: 1
+     FastestTime: 531.5517
+     LastTime: 531.5517
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 23
+     ClassPosition: 1
+     CarIdx: 2
+     Lap: 1
+     Time: 536.1656
+     FastestLap: 1
+     FastestTime: 536.1656
+     LastTime: 537.8501
+     LapsLed: 0
+     LapsComplete: 3
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 24
+     ClassPosition: 2
+     CarIdx: 44
+     Lap: 1
+     Time: 538.8658
+     FastestLap: 1
+     FastestTime: 538.8658
+     LastTime: 538.8658
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 25
+     ClassPosition: 3
+     CarIdx: 9
+     Lap: 2
+     Time: 541.0200
+     FastestLap: 2
+     FastestTime: 541.0200
+     LastTime: 541.0200
+     LapsLed: 0
+     LapsComplete: 2
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 26
+     ClassPosition: 4
+     CarIdx: 11
+     Lap: 1
+     Time: 542.5419
+     FastestLap: 1
+     FastestTime: 542.5419
+     LastTime: 542.5419
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 27
+     ClassPosition: 5
+     CarIdx: 8
+     Lap: 1
+     Time: 546.2957
+     FastestLap: 1
+     FastestTime: 546.2957
+     LastTime: 546.2957
+     LapsLed: 0
+     LapsComplete: 1
+     JokerLapsComplete: 0
+     LapsDriven: 0.000
+     Incidents: 0
+     ReasonOutId: 0
+     ReasonOutStr: Running
+   - Position: 28
+     ClassPosition: 6
+     CarIdx: 45
+     Lap: 1
+     Time: 549.1588
+     FastestLap: 1
+     FastestTime: 549.1588
+     LastTime: 549.1588
      LapsLed: 0
      LapsComplete: 1
      JokerLapsComplete: 0
@@ -109,9 +514,9 @@ SessionInfo:
      ReasonOutId: 0
      ReasonOutStr: Running
    ResultsFastestLap:
-   - CarIdx: 1
-     FastestLap: 1
-     FastestTime: 552.5053
+   - CarIdx: 26
+     FastestLap: 4
+     FastestTime: 491.0438
    ResultsAverageLapTime: -1.0000
    ResultsNumCautionFlags: 0
    ResultsNumCautionLaps: 0
@@ -723,7 +1128,7 @@ RadioInfo:
    - FrequencyNum: 2
      FrequencyName: "@TEAM"
      Priority: 60
-     CarIdx: 6
+     CarIdx: 27
      EntryIdx: -1
      ClubID: 0
      CanScan: 1
@@ -757,7 +1162,7 @@ RadioInfo:
      FrequencyName: "@PRIVATE"
      Priority: 70
      CarIdx: -1
-     EntryIdx: 6
+     EntryIdx: 27
      ClubID: 0
      CanScan: 1
      CanSquawk: 1
@@ -766,7 +1171,7 @@ RadioInfo:
      IsDeletable: 0
 
 DriverInfo:
- DriverCarIdx: 6
+ DriverCarIdx: 27
  DriverUserID: 392404
  PaceCarIdx: 0
  DriverHeadPosX: -0.179
@@ -783,10 +1188,10 @@ DriverInfo:
  DriverCarSLLastRPM: 8150.000
  DriverCarSLBlinkRPM: 8200.000
  DriverCarVersion: 2020.04.07.01
- DriverPitTrkPct: 0.010409
+ DriverPitTrkPct: 0.005118
  DriverCarEstLapTime: 529.6407
  DriverSetupName: 24H_NOS_by_Ole_v4.sto
- DriverSetupIsModified: 0
+ DriverSetupIsModified: 1
  DriverSetupLoadTypeName: user
  DriverSetupPassedTech: 1
  DriverIncidentCount: 0
@@ -831,201 +1236,1020 @@ DriverInfo:
    CurDriverIncidentCount: -1
    TeamIncidentCount: -1
  - CarIdx: 1
-   UserName: Lukas Habersam
-   AbbrevName: Habersam, L
-   Initials: LH
-   UserID: 288596
+   UserName: Jan-Eike Zanders
+   AbbrevName: Zanders, J
+   Initials: JZ
+   UserID: 314054
    TeamID: 0
-   TeamName: Lukas Habersam
-   CarNumber: "22"
-   CarNumberRaw: 22
-   CarPath: audir8gt3
-   CarClassID: 80
-   CarID: 73
+   TeamName: Jan-Eike Zanders
+   CarNumber: "1"
+   CarNumberRaw: 1
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
    CarIsPaceCar: 0
    CarIsAI: 0
-   CarScreenName: Audi R8 LMS
-   CarScreenNameShort: Audi R8 LMS
-   CarClassShortName: Audi R8 GT3
-   CarClassRelSpeed: 52
-   CarClassLicenseLevel: 0
-   CarClassMaxFuelPct: 1.000 %
-   CarClassWeightPenalty: 0.000 kg
-   CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0xff5888
-   IRating: 1045
-   LicLevel: 7
-   LicSubLevel: 309
-   LicString: D 3.09
-   LicColor: 0xfc8a27
-   IsSpectator: 0
-   CarDesignStr: 10,000000,000000,ff0f9f,000000
-   HelmetDesignStr: 67,000000,000000,ff0f9f
-   SuitDesignStr: 3,000000,000000,b30007
-   CarNumberDesignStr: 0,0,ffffff,777777,000000
-   CarSponsor_1: 98
-   CarSponsor_2: 105
-   ClubName: DE-AT-CH
-   DivisionName: Division 1
-   CurDriverIncidentCount: -1
-   TeamIncidentCount: -1
- - CarIdx: 2
-   UserName: Timm Janzen
-   AbbrevName: Janzen, T
-   Initials: TJ
-   UserID: 453146
-   TeamID: 0
-   TeamName: Timm Janzen
-   CarNumber: "19"
-   CarNumberRaw: 19
-   CarPath: audir8gt3
-   CarClassID: 80
-   CarID: 73
-   CarIsPaceCar: 0
-   CarIsAI: 0
-   CarScreenName: Audi R8 LMS
-   CarScreenNameShort: Audi R8 LMS
-   CarClassShortName: Audi R8 GT3
-   CarClassRelSpeed: 52
-   CarClassLicenseLevel: 0
-   CarClassMaxFuelPct: 1.000 %
-   CarClassWeightPenalty: 0.000 kg
-   CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0xff5888
-   IRating: 1308
-   LicLevel: 6
-   LicSubLevel: 249
-   LicString: D 2.49
-   LicColor: 0xfc8a27
-   IsSpectator: 0
-   CarDesignStr: 1,000000,1a4b9b,ffffff
-   HelmetDesignStr: 35,000000,4080e7,a1afb5
-   SuitDesignStr: 27,0e3f71,000000,34373c
-   CarNumberDesignStr: 0,0,ffffff,777777,000000
-   CarSponsor_1: 79
-   CarSponsor_2: 0
-   ClubName: DE-AT-CH
-   DivisionName: Division 1
-   CurDriverIncidentCount: -1
-   TeamIncidentCount: -1
- - CarIdx: 3
-   UserName: Marvin Pauly
-   AbbrevName: Pauly, M
-   Initials: MP
-   UserID: 386615
-   TeamID: 0
-   TeamName: Marvin Pauly
-   CarNumber: "3"
-   CarNumberRaw: 3
-   CarPath: audir8gt3
-   CarClassID: 80
-   CarID: 73
-   CarIsPaceCar: 0
-   CarIsAI: 0
-   CarScreenName: Audi R8 LMS
-   CarScreenNameShort: Audi R8 LMS
-   CarClassShortName: Audi R8 GT3
-   CarClassRelSpeed: 52
-   CarClassLicenseLevel: 0
-   CarClassMaxFuelPct: 1.000 %
-   CarClassWeightPenalty: 0.000 kg
-   CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0xff5888
-   IRating: 1386
-   LicLevel: 18
-   LicSubLevel: 262
-   LicString: A 2.62
-   LicColor: 0x0153db
-   IsSpectator: 0
-   CarDesignStr: 0,ed2129,ffffff,ffffff
-   HelmetDesignStr: 64,000000,ffffff,ffffff
-   SuitDesignStr: 2,000000,ffffff,ffffff
-   CarNumberDesignStr: 0,0,ffffff,777777,000000
-   CarSponsor_1: 0
-   CarSponsor_2: 0
-   ClubName: DE-AT-CH
-   DivisionName: Division 1
-   CurDriverIncidentCount: -1
-   TeamIncidentCount: -1
- - CarIdx: 4
-   UserName: Julio Malagarriga Duarte
-   AbbrevName: Duarte, J
-   Initials: JD
-   UserID: 443249
-   TeamID: 0
-   TeamName: Julio Malagarriga Duarte
-   CarNumber: "5"
-   CarNumberRaw: 5
-   CarPath: ferrari488gt3
-   CarClassID: 102
-   CarID: 94
-   CarIsPaceCar: 0
-   CarIsAI: 0
-   CarScreenName: Ferrari 488 GT3
-   CarScreenNameShort: Ferrari 488 GT3
-   CarClassShortName: Ferrari 488 GT3
-   CarClassRelSpeed: 52
-   CarClassLicenseLevel: 0
-   CarClassMaxFuelPct: 1.000 %
-   CarClassWeightPenalty: 0.000 kg
-   CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0xae6bff
-   IRating: 1410
-   LicLevel: 11
-   LicSubLevel: 364
-   LicString: C 3.64
-   LicColor: 0xfeec04
-   IsSpectator: 0
-   CarDesignStr: 6,ffffff,ed2129,f80d0d
-   HelmetDesignStr: 31,2420ee,fcff47,f13727
-   SuitDesignStr: 15,111111,ffee47,0300c2
-   CarNumberDesignStr: 0,0,ffffff,777777,000000
-   CarSponsor_1: 0
-   CarSponsor_2: 0
-   ClubName: Iberia
-   DivisionName: Division 1
-   CurDriverIncidentCount: -1
-   TeamIncidentCount: -1
- - CarIdx: 5
-   UserName: Francisco Javier Gonzalez Gonzalez2
-   AbbrevName: 
-   Initials: 
-   UserID: 193944
-   TeamID: 0
-   TeamName: Francisco Javier Gonzalez Gonzalez2
-   CarNumber: "6"
-   CarNumberRaw: 6
-   CarPath: bmwz4gt3
-   CarClassID: 61
-   CarID: 55
-   CarIsPaceCar: 0
-   CarIsAI: 0
-   CarScreenName: BMW Z4 GT3
-   CarScreenNameShort: BMW Z4 GT3
-   CarClassShortName: BMW Z4
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
    CarClassRelSpeed: 52
    CarClassLicenseLevel: 0
    CarClassMaxFuelPct: 1.000 %
    CarClassWeightPenalty: 0.000 kg
    CarClassPowerAdjust: 0.000 %
    CarClassColor: 0xffda59
-   IRating: 2321
-   LicLevel: 18
-   LicSubLevel: 264
-   LicString: A 2.64
+   IRating: 1547
+   LicLevel: 19
+   LicSubLevel: 367
+   LicString: A 3.67
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,0300c2,111111,ffee47
+   HelmetDesignStr: 8,47190b,111111,ffee47
+   SuitDesignStr: 3,dff6f5,111111,19181b
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 2
+   UserName: Waldemar Binder
+   AbbrevName: Binder, W
+   Initials: WB
+   UserID: 320455
+   TeamID: 0
+   TeamName: Waldemar Binder
+   CarNumber: "2"
+   CarNumberRaw: 2
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 4042
+   LicLevel: 20
+   LicSubLevel: 477
+   LicString: A 4.77
    LicColor: 0x0153db
    IsSpectator: 0
    CarDesignStr: 0,000000,000000,000000
-   HelmetDesignStr: 44,000000,faab00,ed2129
-   SuitDesignStr: 30,000000,8a0010,db9106
+   HelmetDesignStr: 67,040101,fe252a,f8f062
+   SuitDesignStr: 22,040b0c,f50003,e0d106
    CarNumberDesignStr: 0,0,000000,000000,000000
    CarSponsor_1: 0
    CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 3
+   UserName: Bingen Jimenez2
+   AbbrevName: Jimenez2, B
+   Initials: BJ
+   UserID: 260578
+   TeamID: 0
+   TeamName: Bingen Jimenez2
+   CarNumber: "087"
+   CarNumberRaw: 3087
+   CarPath: porsche911cup
+   CarClassID: 95
+   CarID: 88
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 911 GT3 Cup (991)
+   CarScreenNameShort: Porsche 911 GT3 Cup
+   CarClassShortName: Porsche 911
+   CarClassRelSpeed: 51
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0x33ceff
+   IRating: 3264
+   LicLevel: 18
+   LicSubLevel: 274
+   LicString: A 2.74
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 2,575757,000000,d60000,373a36
+   HelmetDesignStr: 65,ffffff,eb0000,000000
+   SuitDesignStr: 3,ef6a34,000000,f8f1f1
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 107
+   CarSponsor_2: 175
    ClubName: Iberia
    DivisionName: Division 1
    CurDriverIncidentCount: -1
    TeamIncidentCount: -1
+ - CarIdx: 4
+   UserName: Franck Sadler
+   AbbrevName: Sadler, F
+   Initials: FS
+   UserID: 319753
+   TeamID: 0
+   TeamName: Franck Sadler
+   CarNumber: "4"
+   CarNumberRaw: 4
+   CarPath: bmwz4gt3
+   CarClassID: 82
+   CarID: 55
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: BMW Z4 GT3
+   CarScreenNameShort: BMW Z4 GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 9.525 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1826
+   LicLevel: 19
+   LicSubLevel: 398
+   LicString: A 3.98
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 19,000000,ed2129,2a3795
+   SuitDesignStr: 1,ffffff,ed2129,2a3795
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 5
+   UserName: Alexander Wacker
+   AbbrevName: Wacker, A
+   Initials: AW
+   UserID: 306697
+   TeamID: 0
+   TeamName: Alexander Wacker
+   CarNumber: "5"
+   CarNumberRaw: 5
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1000
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,111111,6d6e71,ffffff
+   HelmetDesignStr: 6,111111,6d6e71,ffffff
+   SuitDesignStr: 22,111111,6d6e71,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
  - CarIdx: 6
+   UserName: Michael Finckbohner
+   AbbrevName: Finckbohner, M
+   Initials: MF
+   UserID: 341883
+   TeamID: 0
+   TeamName: Michael Finckbohner
+   CarNumber: "42"
+   CarNumberRaw: 42
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3429
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,000000,d41616,f06c00,1033e9
+   HelmetDesignStr: 1,000000,d41616,f06c00
+   SuitDesignStr: 1,000000,4b4b4b,ed2129
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 7
+   UserName: Kevin Prommegger
+   AbbrevName: Prommegger, K
+   Initials: KP
+   UserID: 367172
+   TeamID: 0
+   TeamName: Kevin Prommegger
+   CarNumber: "7"
+   CarNumberRaw: 7
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 1006
+   LicLevel: 10
+   LicSubLevel: 242
+   LicString: C 2.42
+   LicColor: 0xfeec04
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 1,fc0706,ffffff,111111
+   SuitDesignStr: 1,fc0706,ffffff,111111
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 8
+   UserName: Jake Moloney
+   AbbrevName: Moloney, J
+   Initials: JM
+   UserID: 142521
+   TeamID: 0
+   TeamName: Jake Moloney
+   CarNumber: "29"
+   CarNumberRaw: 29
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 5807
+   LicLevel: 20
+   LicSubLevel: 476
+   LicString: A 4.76
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 17,000000,ffffff,fc3b3b
+   HelmetDesignStr: 65,b65fdc,46b2e9,ffffff
+   SuitDesignStr: 0,080807,ecebe9,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 139
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 9
+   UserName: Madison Down
+   AbbrevName: Down, M
+   Initials: MD
+   UserID: 50308
+   TeamID: 0
+   TeamName: Madison Down
+   CarNumber: "77"
+   CarNumberRaw: 77
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 8291
+   LicLevel: 20
+   LicSubLevel: 480
+   LicString: A 4.80
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 19,ffffff,ff2e2e,000000
+   HelmetDesignStr: 60,db0000,000000,ffffff
+   SuitDesignStr: 21,000000,bd0d00,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 138
+   CarSponsor_2: 138
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 10
+   UserName: Tom Zwiers
+   AbbrevName: Zwiers, T
+   Initials: TZ
+   UserID: 166240
+   TeamID: 0
+   TeamName: Tom Zwiers
+   CarNumber: "10"
+   CarNumberRaw: 10
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3084
+   LicLevel: 19
+   LicSubLevel: 394
+   LicString: A 3.94
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,ffffff,000000,ffffff;000000
+   HelmetDesignStr: 65,ffffff,ed2129,000000
+   SuitDesignStr: 1,ed2129,051690,959595
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 11
+   UserName: Gilles Hubin
+   AbbrevName: Hubin, G
+   Initials: GH
+   UserID: 333211
+   TeamID: 0
+   TeamName: Gilles Hubin
+   CarNumber: "13"
+   CarNumberRaw: 13
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 3311
+   LicLevel: 19
+   LicSubLevel: 326
+   LicString: A 3.26
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 2,070404,f31616,101eda
+   HelmetDesignStr: 37,f1f50a,f00000,0a0a0a
+   SuitDesignStr: 3,ca0c0c,000000,e6ff00
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 12
+   UserName: Richard Hamstead
+   AbbrevName: Hamstead, R
+   Initials: RH
+   UserID: 28805
+   TeamID: 0
+   TeamName: Richard Hamstead
+   CarNumber: "12"
+   CarNumberRaw: 12
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 6869
+   LicLevel: 20
+   LicSubLevel: 463
+   LicString: A 4.63
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 65,000000,ffffff,01129e
+   SuitDesignStr: 26,f08300,000000,ffffff
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 13
+   UserName: Kurt Stenberg
+   AbbrevName: Stenberg, K
+   Initials: KS
+   UserID: 107819
+   TeamID: 0
+   TeamName: Kurt Stenberg
+   CarNumber: "14"
+   CarNumberRaw: 14
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 3787
+   LicLevel: 14
+   LicSubLevel: 290
+   LicString: B 2.90
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 10,ffffff,c43400,000000
+   SuitDesignStr: 11,c45e00,000000,f8e9ec
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 14
+   UserName: Timo Heyden
+   AbbrevName: Heyden, T
+   Initials: TH
+   UserID: 295310
+   TeamID: 0
+   TeamName: Timo Heyden
+   CarNumber: "15"
+   CarNumberRaw: 15
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 4974
+   LicLevel: 19
+   LicSubLevel: 381
+   LicString: A 3.81
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 8,575757,2c2c2c,3bfffd;000000
+   HelmetDesignStr: 12,575757,2c2c2c,3bfffd
+   SuitDesignStr: 22,575757,2c2c2c,3bfffd
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 15
+   UserName: Yvo de Brouwer
+   AbbrevName: Brouwer, Y
+   Initials: YB
+   UserID: 389637
+   TeamID: 0
+   TeamName: Yvo de Brouwer
+   CarNumber: "16"
+   CarNumberRaw: 16
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3011
+   LicLevel: 19
+   LicSubLevel: 384
+   LicString: A 3.84
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 4,000000,000000,ef721f
+   HelmetDesignStr: 7,ed2129,f17605,040303
+   SuitDesignStr: 4,ffffff,111111,f06e34
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 107
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 16
+   UserName: Julien Gueuret
+   AbbrevName: Gueuret, J
+   Initials: JG
+   UserID: 212825
+   TeamID: 0
+   TeamName: Julien Gueuret
+   CarNumber: "17"
+   CarNumberRaw: 17
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 4361
+   LicLevel: 18
+   LicSubLevel: 249
+   LicString: A 2.49
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 4,000000,000000,ed1212;333333
+   HelmetDesignStr: 48,73070c,000000,808080
+   SuitDesignStr: 30,000000,6d6e71,ed2129
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 75
+   CarSponsor_2: 94
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 17
+   UserName: Laurent Cantore
+   AbbrevName: Cantore, L
+   Initials: LC
+   UserID: 248246
+   TeamID: 0
+   TeamName: Laurent Cantore
+   CarNumber: "18"
+   CarNumberRaw: 18
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3349
+   LicLevel: 20
+   LicSubLevel: 455
+   LicString: A 4.55
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 2,ffffff,0913cd,ed2129,ff6e02
+   HelmetDesignStr: 28,ffffff,0913cd,ed2129
+   SuitDesignStr: 7,ed2129,ffffff,ed2129
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 106
+   CarSponsor_2: 45
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 18
+   UserName: Mathieu NEU
+   AbbrevName: NEU, M
+   Initials: MN
+   UserID: 228806
+   TeamID: 0
+   TeamName: Mathieu NEU
+   CarNumber: "19"
+   CarNumberRaw: 19
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3535
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,ffffff,000000,000000
+   HelmetDesignStr: 30,ffffff,2a3795,ed2129
+   SuitDesignStr: 28,f40633,f40633,f40633
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 1
+   CarSponsor_2: 1
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 19
+   UserName: Jonas Bodin
+   AbbrevName: Bodin, J
+   Initials: JB
+   UserID: 37785
+   TeamID: 0
+   TeamName: Jonas Bodin
+   CarNumber: "20"
+   CarNumberRaw: 20
+   CarPath: porsche911cup
+   CarClassID: 95
+   CarID: 88
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 911 GT3 Cup (991)
+   CarScreenNameShort: Porsche 911 GT3 Cup
+   CarClassShortName: Porsche 911
+   CarClassRelSpeed: 51
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0x33ceff
+   IRating: 4510
+   LicLevel: 20
+   LicSubLevel: 427
+   LicString: A 4.27
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 18,e5e6e6,383939,03b4b5,000000
+   HelmetDesignStr: 28,faec1e,0c5683,0c5683
+   SuitDesignStr: 12,c10606,02a238,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 1
+   ClubName: Scandinavia
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 20
+   UserName: Tom Vallenthini
+   AbbrevName: Vallenthini, T
+   Initials: TV
+   UserID: 99265
+   TeamID: 0
+   TeamName: Tom Vallenthini
+   CarNumber: "21"
+   CarNumberRaw: 21
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 7270
+   LicLevel: 20
+   LicSubLevel: 442
+   LicString: A 4.42
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 9,ffffff,090606,ed2126
+   SuitDesignStr: 3,ffffff,0b0c13,f50505
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 21
+   UserName: Nelson Yester
+   AbbrevName: Yester, N
+   Initials: NY
+   UserID: 423813
+   TeamID: 0
+   TeamName: Nelson Yester
+   CarNumber: "22"
+   CarNumberRaw: 22
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2033
+   LicLevel: 20
+   LicSubLevel: 487
+   LicString: A 4.87
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 65,000000,000000,0a0a0a
+   SuitDesignStr: 13,000000,000000,0a0a0a
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Florida
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 22
+   UserName: Remco Meurs
+   AbbrevName: Meurs, R
+   Initials: RM
+   UserID: 396772
+   TeamID: 0
+   TeamName: Remco Meurs
+   CarNumber: "23"
+   CarNumberRaw: 23
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1366
+   LicLevel: 16
+   LicSubLevel: 482
+   LicString: B 4.82
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 1,07025d,ef9000,b06104
+   HelmetDesignStr: 1,303021,ef9000,951209
+   SuitDesignStr: 1,10100f,ef9000,951209
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 160
+   CarSponsor_2: 106
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 23
+   UserName: Christopher Cappello
+   AbbrevName: Cappello, C
+   Initials: CC
+   UserID: 258693
+   TeamID: 0
+   TeamName: Christopher Cappello
+   CarNumber: "24"
+   CarNumberRaw: 24
+   CarPath: bmwz4gt3
+   CarClassID: 82
+   CarID: 55
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: BMW Z4 GT3
+   CarScreenNameShort: BMW Z4 GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 9.525 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2858
+   LicLevel: 20
+   LicSubLevel: 497
+   LicString: A 4.97
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,1528ac,c81414,727788
+   HelmetDesignStr: 65,1528ac,c81414,727788
+   SuitDesignStr: 19,19ff14,000000,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 24
+   UserName: Pieter Robyns
+   AbbrevName: Robyns, P
+   Initials: PR
+   UserID: 378867
+   TeamID: 0
+   TeamName: Pieter Robyns
+   CarNumber: "401"
+   CarNumberRaw: 401
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2732
+   LicLevel: 18
+   LicSubLevel: 208
+   LicString: A 2.08
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 23,000000,000000,000000,000000
+   HelmetDesignStr: 28,000000,e9df3f,fc2c34
+   SuitDesignStr: 1,e6e6e6,1299f3,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 107
+   CarSponsor_2: 168
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 25
+   UserName: Klaus Kohnen
+   AbbrevName: Kohnen, K
+   Initials: KK
+   UserID: 300288
+   TeamID: 0
+   TeamName: Klaus Kohnen
+   CarNumber: "25"
+   CarNumberRaw: 25
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 778
+   LicLevel: 18
+   LicSubLevel: 262
+   LicString: A 2.62
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 11,2a3795,2a8529,ffffff,ffffff
+   HelmetDesignStr: 6,982a2a,141010,b1b12f
+   SuitDesignStr: 14,d9ca1c,2234b9,2a933f
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 51
+   CarSponsor_2: 132
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 26
+   UserName: Milos Pavlovic
+   AbbrevName: Pavlovic, M
+   Initials: MP
+   UserID: 262562
+   TeamID: 0
+   TeamName: Milos Pavlovic
+   CarNumber: "26"
+   CarNumberRaw: 26
+   CarPath: bmwz4gt3
+   CarClassID: 82
+   CarID: 55
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: BMW Z4 GT3
+   CarScreenNameShort: BMW Z4 GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 9.525 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2575
+   LicLevel: 16
+   LicSubLevel: 499
+   LicString: B 4.99
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 0,ffffff,ffffff,ffffff
+   SuitDesignStr: 0,ffffff,ffffff,ffffff
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 27
    UserName: Holger Miefert
    AbbrevName: Miefert, H
    Initials: HM
@@ -1047,7 +2271,7 @@ DriverInfo:
    CarClassMaxFuelPct: 1.000 %
    CarClassWeightPenalty: 0.000 kg
    CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0x53ff77
+   CarClassColor: 0x33ceff
    IRating: 1845
    LicLevel: 19
    LicSubLevel: 374
@@ -1064,42 +2288,1329 @@ DriverInfo:
    DivisionName: Division 1
    CurDriverIncidentCount: 0
    TeamIncidentCount: 0
- - CarIdx: 7
-   UserName: José Maia
-   AbbrevName: Maia, J
-   Initials: JM
-   UserID: 289806
+ - CarIdx: 28
+   UserName: Fábio Soares
+   AbbrevName: Soares, F
+   Initials: FS
+   UserID: 399617
    TeamID: 0
-   TeamName: José Maia
-   CarNumber: "14"
-   CarNumberRaw: 14
+   TeamName: Fábio Soares
+   CarNumber: "8"
+   CarNumberRaw: 8
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2057
+   LicLevel: 19
+   LicSubLevel: 324
+   LicString: A 3.24
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,ffffff,cccccc,666666
+   HelmetDesignStr: 35,050500,ffffff,f7fdf9
+   SuitDesignStr: 29,010a03,fbefef,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Iberia
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 29
+   UserName: Reto Hartmann
+   AbbrevName: Hartmann, R
+   Initials: RH
+   UserID: 125180
+   TeamID: 0
+   TeamName: Reto Hartmann
+   CarNumber: "58"
+   CarNumberRaw: 58
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 5871
+   LicLevel: 20
+   LicSubLevel: 415
+   LicString: A 4.15
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 16,000000,013f86,ffdd00
+   HelmetDesignStr: 1,000000,f9fd1c,6d6e71
+   SuitDesignStr: 12,000000,013f86,fff11f
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 30
+   UserName: KMR Japan
+   AbbrevName: Japan, K
+   Initials: KJ
+   UserID: 338769
+   TeamID: 0
+   TeamName: KMR Japan
+   CarNumber: "993"
+   CarNumberRaw: 993
    CarPath: mercedesamggt3
-   CarClassID: 79
+   CarClassID: 82
    CarID: 72
    CarIsPaceCar: 0
    CarIsAI: 0
    CarScreenName: Mercedes AMG GT3
    CarScreenNameShort: Mercedes AMG GT3
-   CarClassShortName: AMG GT3
+   CarClassShortName: GT3 German
    CarClassRelSpeed: 52
    CarClassLicenseLevel: 0
    CarClassMaxFuelPct: 1.000 %
    CarClassWeightPenalty: 0.000 kg
    CarClassPowerAdjust: 0.000 %
-   CarClassColor: 0x33ceff
-   IRating: 1250
+   CarClassColor: 0xffda59
+   IRating: 1680
+   LicLevel: 6
+   LicSubLevel: 269
+   LicString: D 2.69
+   LicColor: 0xfc8a27
+   IsSpectator: 0
+   CarDesignStr: 13,100066,d6d6d6,db94ac,000000
+   HelmetDesignStr: 61,e9e8e8,dd9293,f12e34
+   SuitDesignStr: 12,000947,e0514d,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Japan
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 31
+   UserName: Michael Healey
+   AbbrevName: Healey, M
+   Initials: MH
+   UserID: 173405
+   TeamID: 0
+   TeamName: Michael Healey
+   CarNumber: "048"
+   CarNumberRaw: 3048
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 6629
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 23,030202,6d6e71,13dd17
+   HelmetDesignStr: 64,ed2129,000000,000000
+   SuitDesignStr: 2,080808,ca1c1c,d9cece
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 32
+   UserName: Mathias Heyd
+   AbbrevName: Heyd, M
+   Initials: MH
+   UserID: 402037
+   TeamID: 0
+   TeamName: Mathias Heyd
+   CarNumber: "32"
+   CarNumberRaw: 32
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1946
+   LicLevel: 20
+   LicSubLevel: 475
+   LicString: A 4.75
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 1,050505,111111,ffffff
+   SuitDesignStr: 3,0d0d0d,111111,ffffff
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 33
+   UserName: Satoki Ogiso
+   AbbrevName: Ogiso, S
+   Initials: SO
+   UserID: 245029
+   TeamID: 0
+   TeamName: Satoki Ogiso
+   CarNumber: "87"
+   CarNumberRaw: 87
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3223
    LicLevel: 14
-   LicSubLevel: 207
-   LicString: B 2.07
+   LicSubLevel: 280
+   LicString: B 2.80
    LicColor: 0x00c702
    IsSpectator: 0
-   CarDesignStr: 0,0a8aff,8a8a8a,000000;ababab
-   HelmetDesignStr: 42,0a7dff,ebd200,d62200
-   SuitDesignStr: 3,000000,ffffff,8c8c8c
+   CarDesignStr: 18,1c1a23,281f28,ed2129
+   HelmetDesignStr: 65,000000,595959,b80000
+   SuitDesignStr: 3,141414,303030,ed2129
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 105
+   CarSponsor_2: 80
+   ClubName: Japan
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 34
+   UserName: Michael Kutscher
+   AbbrevName: Kutscher, M
+   Initials: MK
+   UserID: 470944
+   TeamID: 0
+   TeamName: Michael Kutscher
+   CarNumber: "34"
+   CarNumberRaw: 34
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1256
+   LicLevel: 6
+   LicSubLevel: 239
+   LicString: D 2.39
+   LicColor: 0xfc8a27
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 57,363636,eb2828,000000
+   SuitDesignStr: 21,707070,831c26,666666
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 35
+   UserName: Tobias Hüweler
+   AbbrevName: Hüweler, T
+   Initials: TH
+   UserID: 225624
+   TeamID: 0
+   TeamName: Tobias Hüweler
+   CarNumber: "35"
+   CarNumberRaw: 35
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 5437
+   LicLevel: 17
+   LicSubLevel: 182
+   LicString: A 1.82
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 16,000000,013f86,ffdd00,000000
+   HelmetDesignStr: 65,6d6e71,000000,f2ff1f
+   SuitDesignStr: 12,000000,013f86,ffdd00
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 36
+   UserName: Jonca Jerome
+   AbbrevName: Jerome, J
+   Initials: JJ
+   UserID: 359562
+   TeamID: 0
+   TeamName: Jonca Jerome
+   CarNumber: "36"
+   CarNumberRaw: 36
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1193
+   LicLevel: 14
+   LicSubLevel: 227
+   LicString: B 2.27
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 1,0828af,000000,f5fcff
+   HelmetDesignStr: 28,0b0a0a,000000,ffffff
+   SuitDesignStr: 28,ffffff,0f0f10,030303
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 37
+   UserName: Sebastian Harzem
+   AbbrevName: Harzem, S
+   Initials: SH
+   UserID: 403788
+   TeamID: 0
+   TeamName: Sebastian Harzem
+   CarNumber: "37"
+   CarNumberRaw: 37
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2575
+   LicLevel: 16
+   LicSubLevel: 498
+   LicString: B 4.98
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 22,000000,9e8115,8a8a8a,000000
+   HelmetDesignStr: 62,353535,f70000,000000
+   SuitDesignStr: 21,000000,f70000,353535
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 106
+   CarSponsor_2: 74
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 38
+   UserName: Francisco Rendo
+   AbbrevName: Rendo, F
+   Initials: FR
+   UserID: 275011
+   TeamID: 0
+   TeamName: Francisco Rendo
+   CarNumber: "38"
+   CarNumberRaw: 38
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2636
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,ff0002,ff0a0a
+   HelmetDesignStr: 16,58ee34,000000,000000
+   SuitDesignStr: 1,061406,0af000,061406
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: UK and I
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 39
+   UserName: Vincent Buchel
+   AbbrevName: Buchel, V
+   Initials: VB
+   UserID: 326839
+   TeamID: 0
+   TeamName: Vincent Buchel
+   CarNumber: "39"
+   CarNumberRaw: 39
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2562
+   LicLevel: 16
+   LicSubLevel: 499
+   LicString: B 4.99
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 1,454545,570100,000000
+   HelmetDesignStr: 59,8a0004,262626,000000
+   SuitDesignStr: 27,000000,d40202,949494
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 40
+   UserName: Julien Buchel
+   AbbrevName: Buchel, J
+   Initials: JB
+   UserID: 326845
+   TeamID: 0
+   TeamName: Julien Buchel
+   CarNumber: "40"
+   CarNumberRaw: 40
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1495
+   LicLevel: 16
+   LicSubLevel: 499
+   LicString: B 4.99
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 1,ed2129,ffffff,111111
+   HelmetDesignStr: 28,ffffff,ff0000,ffffff
+   SuitDesignStr: 7,ffffff,ff0000,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 41
+   UserName: POTEAU donovan
+   AbbrevName: donovan, P
+   Initials: Pd
+   UserID: 326902
+   TeamID: 0
+   TeamName: POTEAU donovan
+   CarNumber: "41"
+   CarNumberRaw: 41
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1604
+   LicLevel: 19
+   LicSubLevel: 387
+   LicString: A 3.87
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,8e0101,ffffff,4bd3fd
+   HelmetDesignStr: 1,8e0101,ffffff,4bd3fd
+   SuitDesignStr: 1,013990,ffffff,4bd3fd
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 42
+   UserName: Trqutwein Morgan
+   AbbrevName: Morgan, T
+   Initials: TM
+   UserID: 387044
+   TeamID: 0
+   TeamName: Trqutwein Morgan
+   CarNumber: "43"
+   CarNumberRaw: 43
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1211
+   LicLevel: 15
+   LicSubLevel: 328
+   LicString: B 3.28
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 1,111111,cccccc,ed1c24
+   SuitDesignStr: 1,111111,cccccc,ed1c24
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 43
+   UserName: Maxime Oosten
+   AbbrevName: Oosten, M
+   Initials: MO
+   UserID: 446783
+   TeamID: 0
+   TeamName: Maxime Oosten
+   CarNumber: "44"
+   CarNumberRaw: 44
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 1530
+   LicLevel: 7
+   LicSubLevel: 331
+   LicString: D 3.31
+   LicColor: 0xfc8a27
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 28,e6f93e,000000,000000
+   SuitDesignStr: 1,111111,5481fc,ffffff
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 44
+   UserName: Nils Carstensen
+   AbbrevName: Carstensen, N
+   Initials: NC
+   UserID: 157852
+   TeamID: 0
+   TeamName: Nils Carstensen
+   CarNumber: "45"
+   CarNumberRaw: 45
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 6222
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 4,ffffff,1f2735,008bcf
+   HelmetDesignStr: 64,ed2129,ffffff,3f411b
+   SuitDesignStr: 1,ed2129,ffffff,373715
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 45
+   UserName: Patrick Langkau
+   AbbrevName: Langkau, P
+   Initials: PL
+   UserID: 219393
+   TeamID: 0
+   TeamName: Patrick Langkau
+   CarNumber: "46"
+   CarNumberRaw: 46
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 5410
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 4,ffffff,1d1e2b,16acc5
+   HelmetDesignStr: 65,6d6e71,000000,ffffff
+   SuitDesignStr: 4,ede135,edd726,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 46
+   UserName: Ju Bourgogne
+   AbbrevName: Bourgogne, J
+   Initials: JB
+   UserID: 350028
+   TeamID: 0
+   TeamName: Ju Bourgogne
+   CarNumber: "47"
+   CarNumberRaw: 47
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2483
+   LicLevel: 20
+   LicSubLevel: 470
+   LicString: A 4.70
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,033067,07c6c4,ffffff;07c6c4
+   HelmetDesignStr: 31,c921b7,ffffff,000000
+   SuitDesignStr: 3,ed2129,ffffff,2a2a93
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 47
+   UserName: Tanguy Campomizzi
+   AbbrevName: Campomizzi, T
+   Initials: TC
+   UserID: 331407
+   TeamID: 0
+   TeamName: Tanguy Campomizzi
+   CarNumber: "050"
+   CarNumberRaw: 3050
+   CarPath: bmwz4gt3
+   CarClassID: 82
+   CarID: 55
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: BMW Z4 GT3
+   CarScreenNameShort: BMW Z4 GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 9.525 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2910
+   LicLevel: 18
+   LicSubLevel: 268
+   LicString: A 2.68
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 24,3fff2e,ffffff,000000,000000
+   HelmetDesignStr: 68,000000,22f61e,fbfefb
+   SuitDesignStr: 3,030202,0df829,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 106
+   CarSponsor_2: 74
+   ClubName: France
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 48
+   UserName: Simeon Lynch
+   AbbrevName: Lynch, S
+   Initials: SL
+   UserID: 148934
+   TeamID: 0
+   TeamName: Simeon Lynch
+   CarNumber: "48"
+   CarNumberRaw: 48
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 5287
+   LicLevel: 19
+   LicSubLevel: 368
+   LicString: A 3.68
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,2c2b2b,cccccc,666666
+   HelmetDesignStr: 20,000000,000000,6829fa
+   SuitDesignStr: 11,000000,000000,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: UK and I
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 49
+   UserName: Marc Sauerbier
+   AbbrevName: Sauerbier, M
+   Initials: MS
+   UserID: 265028
+   TeamID: 0
+   TeamName: Marc Sauerbier
+   CarNumber: "49"
+   CarNumberRaw: 49
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2239
+   LicLevel: 14
+   LicSubLevel: 263
+   LicString: B 2.63
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 1,4d4d4d,000000,eadc0b
+   HelmetDesignStr: 11,152ac6,f1ed0e,4518e2
+   SuitDesignStr: 12,0a23d6,f1ed0e,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 50
+   UserName: Christiaan Arp
+   AbbrevName: Arp, C
+   Initials: CA
+   UserID: 189241
+   TeamID: 0
+   TeamName: Christiaan Arp
+   CarNumber: "50"
+   CarNumberRaw: 50
+   CarPath: porsche911cup
+   CarClassID: 95
+   CarID: 88
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 911 GT3 Cup (991)
+   CarScreenNameShort: Porsche 911 GT3 Cup
+   CarClassShortName: Porsche 911
+   CarClassRelSpeed: 51
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0x33ceff
+   IRating: 2911
+   LicLevel: 19
+   LicSubLevel: 320
+   LicString: A 3.20
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,ff0000,00ff00,0000ff
+   HelmetDesignStr: 55,ff6600,cccccc,666666
+   SuitDesignStr: 7,ff6600,cccccc,666666
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 51
+   UserName: Cooper Webster
+   AbbrevName: Webster, C
+   Initials: CW
+   UserID: 161668
+   TeamID: 0
+   TeamName: Cooper Webster
+   CarNumber: "51"
+   CarNumberRaw: 51
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 6905
+   LicLevel: 20
+   LicSubLevel: 459
+   LicString: A 4.59
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 14,ffffff,00c8ff,000000,000000
+   HelmetDesignStr: 53,ffffff,003dff,d0ff14
+   SuitDesignStr: 0,000000,000000,ffffff
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 52
+   UserName: Bjorn Veldhuis
+   AbbrevName: Veldhuis, B
+   Initials: BV
+   UserID: 187390
+   TeamID: 0
+   TeamName: Bjorn Veldhuis
+   CarNumber: "52"
+   CarNumberRaw: 52
+   CarPath: porsche911cup
+   CarClassID: 95
+   CarID: 88
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 911 GT3 Cup (991)
+   CarScreenNameShort: Porsche 911 GT3 Cup
+   CarClassShortName: Porsche 911
+   CarClassRelSpeed: 51
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0x33ceff
+   IRating: 2349
+   LicLevel: 17
+   LicSubLevel: 151
+   LicString: A 1.51
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 2,000000,d6bc32,404040;000000
+   HelmetDesignStr: 35,000000,363636,d6bc32
+   SuitDesignStr: 27,000000,363636,d6bc32
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 53
+   UserName: Matthias-Matthew Siegl
+   AbbrevName: Siegl, M
+   Initials: MS
+   UserID: 267024
+   TeamID: 0
+   TeamName: Matthias-Matthew Siegl
+   CarNumber: "78"
+   CarNumberRaw: 78
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1860
+   LicLevel: 19
+   LicSubLevel: 348
+   LicString: A 3.48
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 11,ffd600,0e3193,000000,000000
+   HelmetDesignStr: 8,ffffff,f0000c,000000
+   SuitDesignStr: 3,0b0a0a,f6ff42,ac1b22
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 1
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 54
+   UserName: Dave R Roberts
+   AbbrevName: Roberts, D
+   Initials: DR
+   UserID: 276968
+   TeamID: 0
+   TeamName: Dave R Roberts
+   CarNumber: "242"
+   CarNumberRaw: 242
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3624
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 1,02067e,ffffff,eee43a
+   HelmetDesignStr: 53,ffffff,0312a6,e4e704
+   SuitDesignStr: 23,000000,000000,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Australia/NZ
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 55
+   UserName: Milan Meijs
+   AbbrevName: Meijs, M
+   Initials: MM
+   UserID: 425412
+   TeamID: 0
+   TeamName: Milan Meijs
+   CarNumber: "55"
+   CarNumberRaw: 55
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1297
+   LicLevel: 6
+   LicSubLevel: 271
+   LicString: D 2.71
+   LicColor: 0xfc8a27
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 56,000ded,ffffff,000000
+   SuitDesignStr: 1,000ded,ffffff,111111
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Benelux
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 57
+   UserName: Patrick Bolster
+   AbbrevName: Bolster, P
+   Initials: PB
+   UserID: 40647
+   TeamID: 0
+   TeamName: Patrick Bolster
+   CarNumber: "57"
+   CarNumberRaw: 57
+   CarPath: bmwz4gt3
+   CarClassID: 82
+   CarID: 55
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: BMW Z4 GT3
+   CarScreenNameShort: BMW Z4 GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 9.525 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 3337
+   LicLevel: 19
+   LicSubLevel: 359
+   LicString: A 3.59
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 2,0e1ea4,fc0706,ffffff
+   HelmetDesignStr: 64,dddddd,fc0706,0116bf
+   SuitDesignStr: 2,ed2129,ffffff,270000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 83
+   CarSponsor_2: 47
+   ClubName: UK and I
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 58
+   UserName: Jonas Urbainczyk
+   AbbrevName: Urbainczyk, J
+   Initials: JU
+   UserID: 477194
+   TeamID: 0
+   TeamName: Jonas Urbainczyk
+   CarNumber: "59"
+   CarNumberRaw: 59
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1350
+   LicLevel: 2
+   LicSubLevel: 250
+   LicString: R 2.50
+   LicColor: 0xfc0706
+   IsSpectator: 0
+   CarDesignStr: 10,000000,d60000,c66c39,000000
+   HelmetDesignStr: 35,990600,000000,c35341
+   SuitDesignStr: 23,111111,d10000,ee734f
    CarNumberDesignStr: 0,0,ffffff,777777,000000
    CarSponsor_1: 51
-   CarSponsor_2: 135
-   ClubName: Iberia
+   CarSponsor_2: 98
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 59
+   UserName: Mineo Yusuke
+   AbbrevName: Yusuke, M
+   Initials: MY
+   UserID: 333049
+   TeamID: 0
+   TeamName: Mineo Yusuke
+   CarNumber: "60"
+   CarNumberRaw: 60
+   CarPath: mercedesamggt3
+   CarClassID: 82
+   CarID: 72
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Mercedes AMG GT3
+   CarScreenNameShort: Mercedes AMG GT3
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 2334
+   LicLevel: 19
+   LicSubLevel: 388
+   LicString: A 3.88
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,000000,000000,000000
+   HelmetDesignStr: 2,1633d7,111111,ffffff
+   SuitDesignStr: 1,d7162d,111111,efd600
+   CarNumberDesignStr: 0,0,000000,000000,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Japan
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 60
+   UserName: Norbert Windholz
+   AbbrevName: Windholz, N
+   Initials: NW
+   UserID: 113603
+   TeamID: 0
+   TeamName: Norbert Windholz
+   CarNumber: "61"
+   CarNumberRaw: 61
+   CarPath: audir8gt3
+   CarClassID: 82
+   CarID: 73
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Audi R8 LMS
+   CarScreenNameShort: Audi R8 LMS
+   CarClassShortName: GT3 German
+   CarClassRelSpeed: 52
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 19.958 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xffda59
+   IRating: 1414
+   LicLevel: 15
+   LicSubLevel: 375
+   LicString: B 3.75
+   LicColor: 0x00c702
+   IsSpectator: 0
+   CarDesignStr: 5,ffffff,e20100,e20100
+   HelmetDesignStr: 22,ffffff,e20100,e20100
+   SuitDesignStr: 30,c40100,1308e7,000000
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 2
+   CarSponsor_2: 45
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 61
+   UserName: Jens Hartrampf
+   AbbrevName: Hartrampf, J
+   Initials: JH
+   UserID: 250311
+   TeamID: 0
+   TeamName: Jens Hartrampf
+   CarNumber: "11"
+   CarNumberRaw: 11
+   CarPath: porsche911cup
+   CarClassID: 95
+   CarID: 88
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 911 GT3 Cup (991)
+   CarScreenNameShort: Porsche 911 GT3 Cup
+   CarClassShortName: Porsche 911
+   CarClassRelSpeed: 51
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0x33ceff
+   IRating: 2662
+   LicLevel: 20
+   LicSubLevel: 499
+   LicString: A 4.99
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 17,565656,565656,a5f00f,a1fb03
+   HelmetDesignStr: 56,000000,000000,000000
+   SuitDesignStr: 22,a0df11,050505,6d6e71
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: DE-AT-CH
+   DivisionName: Division 1
+   CurDriverIncidentCount: -1
+   TeamIncidentCount: -1
+ - CarIdx: 62
+   UserName: Jesper Pedersen3
+   AbbrevName: Pedersen3, J
+   Initials: JP
+   UserID: 355560
+   TeamID: 0
+   TeamName: Jesper Pedersen3
+   CarNumber: "62"
+   CarNumberRaw: 62
+   CarPath: porsche718gt4
+   CarClassID: 1860
+   CarID: 119
+   CarIsPaceCar: 0
+   CarIsAI: 0
+   CarScreenName: Porsche 718 Cayman GT4
+   CarScreenNameShort: Porsche 718 Cayman GT4
+   CarClassShortName: Porsche 718
+   CarClassRelSpeed: 49
+   CarClassLicenseLevel: 0
+   CarClassMaxFuelPct: 1.000 %
+   CarClassWeightPenalty: 0.000 kg
+   CarClassPowerAdjust: 0.000 %
+   CarClassColor: 0xff5888
+   IRating: 1774
+   LicLevel: 19
+   LicSubLevel: 354
+   LicString: A 3.54
+   LicColor: 0x0153db
+   IsSpectator: 0
+   CarDesignStr: 0,ffffff,cccccc,666666,ca0707
+   HelmetDesignStr: 63,f0170f,0a0a0a,000000
+   SuitDesignStr: 30,e00b16,f9f6f6,d72f2d
+   CarNumberDesignStr: 0,0,ffffff,777777,000000
+   CarSponsor_1: 0
+   CarSponsor_2: 0
+   ClubName: Scandinavia
    DivisionName: Division 1
    CurDriverIncidentCount: -1
    TeamIncidentCount: -1
@@ -1136,26 +3647,26 @@ SplitTimeInfo:
    SectorStartPct: 0.948726
 
 CarSetup:
- UpdateCount: 1
+ UpdateCount: 2
  Tires:
   LeftFront:
-   StartingPressure: 165 kPa
-   LastHotPressure: 165 kPa
+   StartingPressure: 169 kPa
+   LastHotPressure: 169 kPa
    LastTempsOMI: 77C, 77C, 77C
    TreadRemaining: 100%, 100%, 100%
   LeftRear:
-   StartingPressure: 165 kPa
-   LastHotPressure: 165 kPa
+   StartingPressure: 169 kPa
+   LastHotPressure: 169 kPa
    LastTempsOMI: 77C, 77C, 77C
    TreadRemaining: 100%, 100%, 100%
   RightFront:
-   StartingPressure: 165 kPa
-   LastHotPressure: 165 kPa
+   StartingPressure: 169 kPa
+   LastHotPressure: 169 kPa
    LastTempsIMO: 77C, 77C, 77C
    TreadRemaining: 100%, 100%, 100%
   RightRear:
-   StartingPressure: 165 kPa
-   LastHotPressure: 165 kPa
+   StartingPressure: 169 kPa
+   LastHotPressure: 169 kPa
    LastTempsIMO: 77C, 77C, 77C
    TreadRemaining: 100%, 100%, 100%
  Chassis:
@@ -1170,7 +3681,7 @@ CarSetup:
    Camber: -4.5 deg
   LeftRear:
    CornerWeight: 3896 N
-   RideHeight: 107.0 mm
+   RideHeight: 107.1 mm
    SpringPerchOffset: 102.0 mm
    Camber: -3.7 deg
    ToeIn: +1.5 mm
@@ -1183,7 +3694,7 @@ CarSetup:
    Camber: -4.5 deg
   RightRear:
    CornerWeight: 3896 N
-   RideHeight: 107.0 mm
+   RideHeight: 107.1 mm
    SpringPerchOffset: 102.0 mm
    Camber: -3.7 deg
    ToeIn: +1.5 mm
@@ -1193,34 +3704,34 @@ CarSetup:
    WingSetting: 6
 
 ...
-AirDensity                      1.1585160493850708
+AirDensity                      1.158514380455017
 AirPressure                     27.783899307250977
-AirTemp                         18.28571128845215
+AirTemp                         18.33333396911621
 Brake                           1.0
 BrakeRaw                        0.0
-CamCameraNumber                 2
-CamCameraState                  83
-CamCarIdx                       6
-CamGroupNumber                  17
+CamCameraNumber                 1
+CamCameraState                  81
+CamCarIdx                       36
+CamGroupNumber                  16
 CarIdxClassPosition             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-CarIdxEstTime                   [0.0, 6.166240215301514, 7.313974857330322, 346.4710998535156, 515.3690795898438, 0.0, 0.0, 141.960205078125, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+CarIdxEstTime                   [0.0, 0.0, 0.0, 509.49114990234375, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 98.75232696533203, 0.0, 506.36346435546875, 0.0, 95.50321197509766, 0.0, 0.0, 0.0, 0.0, 510.63043212890625, 506.5196838378906, 96.802001953125, 94.36231994628906, 523.4782104492188, 423.6298828125, 458.1012878417969, 420.8049621582031, 151.56654357910156, 0.0, 157.2296905517578, 2.185542345046997, 84.22026824951172, 0.0, 187.95138549804688, 105.50406646728516, 0.0, 91.61690521240234, 38.14891815185547, 0.0, 422.75396728515625, 0.0, 8.415593147277832, 145.4581298828125, 525.3158569335938, 0.0, 464.114501953125, 46.75699996948242, 456.9533996582031, 0.0, 0.0, 0.0, 0.0, 508.66448974609375, 27.203998565673828, 0.0, 167.90289306640625, 0.0, 503.3533935546875, 0.0]
 CarIdxF2Time                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-CarIdxGear                      [-1, 5, 6, 1, 6, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-CarIdxLap                       [-1, 2, 2, 1, 0, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-CarIdxLapCompleted              [-1, 1, 1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-CarIdxLapDistPct                [-1.0, 0.010691790841519833, 0.013800319284200668, 0.7728651165962219, 0.2505470812320709, -1.0, -1.0, 0.37163880467414856, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]
-CarIdxOnPitRoad                 [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+CarIdxGear                      [-1, -1, -1, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, 3, -1, 0, -1, -1, -1, -1, 4, 3, 0, 0, 5, 6, 6, 5, 4, -1, 5, 5, 3, -1, 4, 5, -1, 0, 3, -1, 5, -1, 2, 2, 5, -1, 3, 2, 4, -1, -1, -1, -1, 3, 0, -1, 4, -1, 3, -1]
+CarIdxLap                       [-1, -1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 3, -1, 4, -1, 5, -1, -1, -1, -1, 5, 1, 5, 0, 0, 1, 1, 3, 2, -1, 1, 1, 3, -1, 2, 4, -1, 1, 3, -1, 2, -1, 4, 3, 3, -1, 0, 2, 2, -1, -1, -1, -1, 0, 1, -1, 1, -1, 0, -1]
+CarIdxLapCompleted              [-1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 2, -1, 3, -1, 4, -1, -1, -1, -1, 4, 0, 4, -1, -1, 0, 0, 2, 1, -1, 0, 0, 2, -1, 1, 3, -1, 0, 2, -1, 1, -1, 3, 2, 2, -1, -1, 1, 1, -1, -1, -1, -1, -1, 0, -1, 0, -1, -1, -1]
+CarIdxLapDistPct                [-1.0, -1.0, -1.0, 0.23461835086345673, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 0.010965564288198948, -1.0, 0.22509947419166565, -1.0, 0.007072881795465946, -1.0, -1.0, -1.0, -1.0, 0.23816949129104614, 0.22557754814624786, 0.008741159923374653, 0.005118335131555796, 0.2618694603443146, 0.8980515003204346, 0.9649651050567627, 0.8922246694564819, 0.39454832673072815, -1.0, 0.4065139591693878, 0.9998952150344849, 0.11857561767101288, -1.0, 0.47509628534317017, 0.15072493255138397, -1.0, 0.000989307533018291, 0.0369238406419754, -1.0, 0.8961336016654968, -1.0, 0.01624513417482376, 0.3797149062156677, 0.26534098386764526, -1.0, 0.9739514589309692, 0.05132608115673065, 0.9629087448120117, -1.0, -1.0, -1.0, -1.0, 0.2320503294467926, 0.3218722939491272, -1.0, 0.43535423278808594, -1.0, 0.21605390310287476, -1.0]
+CarIdxOnPitRoad                 [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False, True, False, False, False, False, False, False, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
 CarIdxP2P_Count                 [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 CarIdxP2P_Status                [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
 CarIdxPosition                  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-CarIdxRPM                       [-1.0, 8179.4404296875, 7230.23046875, 2167.494140625, 6205.78173828125, -1.0, -1.0, 6088.71533203125, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]
-CarIdxSteer                     [0.0, -0.06545744091272354, -0.0018770854221656919, 0.35494521260261536, 0.11911986768245697, 0.0, 0.0, 0.27918586134910583, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-CarIdxTrackSurface              [-1, 3, 3, 3, 3, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-CarIdxTrackSurfaceMaterial      [-1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-CarLeftRight                    0
+CarIdxRPM                       [-1.0, -1.0, -1.0, 7241.7626953125, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 300.0, -1.0, 5085.61376953125, -1.0, 300.0, -1.0, -1.0, -1.0, -1.0, 6391.97900390625, 6830.85107421875, 300.0, 300.0, 7015.6142578125, 7544.36962890625, 6544.744140625, 7069.48779296875, 6958.283203125, -1.0, 5535.48876953125, 7243.79736328125, 5359.94482421875, -1.0, 6569.212890625, 6679.142578125, -1.0, 300.0, 6677.724609375, -1.0, 7535.7314453125, -1.0, 7728.646484375, 7840.1416015625, 6481.6181640625, -1.0, 6006.88427734375, 6468.2978515625, 6969.60400390625, -1.0, -1.0, -1.0, -1.0, 7618.88330078125, 1099.4866943359375, -1.0, 6680.79638671875, -1.0, 6354.64453125, -1.0]
+CarIdxSteer                     [0.0, 0.0, 0.0, 0.23000778257846832, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.463146524358308e-06, 0.0, 0.05877336487174034, 0.0, 3.035371946680243e-06, 0.0, 0.0, 0.0, 0.0, -0.08133597671985626, -0.4555356204509735, -1.757487325448892e-06, 0.0, 0.4690631330013275, -0.00412931339815259, 0.19868282973766327, 0.04412064701318741, -0.1538078337907791, 0.0, -0.27544036507606506, -0.018306661397218704, -0.2737780213356018, 0.0, 0.09168263524770737, -0.010275591164827347, 0.0, 8.997807526611723e-06, -0.26617470383644104, 0.0, -0.009635086171329021, 0.0, 0.028028059750795364, -0.1647450476884842, -0.4923674762248993, 0.0, 0.05654781684279442, -0.5732038021087646, -0.08677840977907181, 0.0, 0.0, 0.0, 0.0, -0.04900704324245453, 0.0010337597923353314, 0.0, 0.12035942077636719, 0.0, -0.25767964124679565, 0.0]
+CarIdxTrackSurface              [-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, 3, -1, 1, -1, -1, -1, -1, 3, 3, 1, 1, 3, 3, 3, 3, 3, -1, 3, 3, 3, -1, 3, 3, -1, 1, 3, -1, 3, -1, 3, 3, 3, -1, 3, 3, 3, -1, -1, -1, -1, 3, 0, -1, 3, -1, 3, -1]
+CarIdxTrackSurfaceMaterial      [-1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, 1, -1, 5, -1, -1, -1, -1, 1, 1, 5, 5, 1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, 1, 24, -1, 1, -1, 1, -1]
+CarLeftRight                    1
 Clutch                          0.0
-CpuUsageBG                      0.12800447642803192
-dcBrakeBias                     0.0
+CpuUsageBG                      0.5260080695152283
+dcBrakeBias                     46.249996185302734
 DCDriversSoFar                  1
 dcHeadlightFlash                False
 DCLapStatus                     2
@@ -1228,27 +3739,27 @@ dcPitSpeedLimiterToggle         False
 dcStarter                       False
 DisplayUnits                    1
 dpFastRepair                    0.0
-dpFuelAddKg                     0.0
+dpFuelAddKg                     6.0
 dpFuelFill                      0.0
 dpLFTireChange                  0.0
-dpLFTireColdPress               0.0
+dpLFTireColdPress               172.2790069580078
 dpLRTireChange                  0.0
-dpLRTireColdPress               0.0
+dpLRTireColdPress               172.2790069580078
 dpRFTireChange                  0.0
-dpRFTireColdPress               0.0
+dpRFTireColdPress               172.2790069580078
 dpRRTireChange                  0.0
-dpRRTireColdPress               0.0
+dpRRTireColdPress               172.2790069580078
 dpWindshieldTearoff             0.0
 DriverMarker                    False
-EngineWarnings                  0
+EngineWarnings                  14
 EnterExitReset                  0
 FastRepairAvailable             0
 FastRepairUsed                  0
 FogLevel                        0.0
-FrameRate                       90.33103942871094
-FuelLevel                       0.0
-FuelLevelPct                    0.0
-FuelPress                       5.542204473130141e-10
+FrameRate                       89.88092041015625
+FuelLevel                       100.0
+FuelLevelPct                    1.0
+FuelPress                       0.0
 FuelUsePerHour                  0.0
 Gear                            0
 HandbrakeRaw                    0.0
@@ -1256,14 +3767,14 @@ IsDiskLoggingActive             False
 IsDiskLoggingEnabled            True
 IsInGarage                      False
 IsOnTrack                       False
-IsOnTrackCar                    False
+IsOnTrackCar                    True
 IsReplayPlaying                 True
 Lap                             0
 LapBestLap                      0
 LapBestLapTime                  0.0
 LapBestNLapLap                  0
 LapBestNLapTime                 0.0
-LapCompleted                    0
+LapCompleted                    -1
 LapCurrentLapTime               0.0
 LapDeltaToBestLap               0.0
 LapDeltaToBestLap_DD            0.0
@@ -1280,65 +3791,65 @@ LapDeltaToSessionLastlLap_OK    False
 LapDeltaToSessionOptimalLap     0.0
 LapDeltaToSessionOptimalLap_DD  0.0
 LapDeltaToSessionOptimalLap_OK  False
-LapDist                         0.0
-LapDistPct                      0.0
+LapDist                         128.86117553710938
+LapDistPct                      0.005118335131555796
 LapLasNLapSeq                   0
 LapLastLapTime                  0.0
 LapLastNLapTime                 0.0
-LatAccel                        0.0
-LatAccel_ST                     [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-LFbrakeLinePress                0.0
-LFcoldPressure                  165.38783264160156
-LFshockDefl                     0.024955183267593384
-LFshockDefl_ST                  [0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384]
-LFshockVel                      0.0
-LFshockVel_ST                   [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-LFtempCL                        76.56478881835938
-LFtempCM                        76.56478881835938
-LFtempCR                        76.56478881835938
+LatAccel                        -0.2738191783428192
+LatAccel_ST                     [-0.27350541949272156, -0.2744821608066559, -0.27460548281669617, -0.2744607627391815, -0.2744935154914856, -0.2738191783428192]
+LFbrakeLinePress                80.24095916748047
+LFcoldPressure                  172.2790069580078
+LFshockDefl                     0.051908910274505615
+LFshockDefl_ST                  [0.051911015063524246, 0.05190977826714516, 0.051909204572439194, 0.051908642053604126, 0.05190863460302353, 0.051908910274505615]
+LFshockVel                      0.000127066217828542
+LFshockVel_ST                   [-0.00046855665277689695, -0.0003071626997552812, -0.0001856473827501759, -5.5485303164459765e-05, 5.953534127911553e-05, 0.000127066217828542]
+LFtempCL                        76.56777954101562
+LFtempCM                        76.56777954101562
+LFtempCR                        76.56777954101562
 LFwearL                         1.0
 LFwearM                         1.0
 LFwearR                         1.0
 LoadNumTextures                 False
-LongAccel                       0.0
-LongAccel_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-LRbrakeLinePress                0.0
-LRcoldPressure                  165.38783264160156
-LRshockDefl                     0.08064910769462585
-LRshockDefl_ST                  [0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585]
-LRshockVel                      0.0
-LRshockVel_ST                   [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-LRtempCL                        76.58074951171875
-LRtempCM                        76.58074951171875
-LRtempCR                        76.58074951171875
+LongAccel                       -0.25424090027809143
+LongAccel_ST                    [-0.25379693508148193, -0.25287050008773804, -0.2528155446052551, -0.25265705585479736, -0.25372299551963806, -0.25424090027809143]
+LRbrakeLinePress                93.25300598144531
+LRcoldPressure                  172.2790069580078
+LRshockDefl                     0.057915400713682175
+LRshockDefl_ST                  [0.057915098965168, 0.05791374668478966, 0.05791347473859787, 0.05791374668478966, 0.057914990931749344, 0.057915400713682175]
+LRshockVel                      0.00014534307410940528
+LRshockVel_ST                   [-0.0006165127269923687, -0.00028931297129020095, 6.788222435716307e-06, 0.0003424480091780424, 0.0002566951734479517, 0.00014534307410940528]
+LRtempCL                        76.583740234375
+LRtempCM                        76.583740234375
+LRtempCR                        76.583740234375
 LRwearL                         1.0
 LRwearM                         1.0
 LRwearR                         1.0
-ManifoldPress                   1.0
+ManifoldPress                   0.9410807490348816
 ManualBoost                     False
 ManualNoBoost                   False
 OilLevel                        11.0
-OilPress                        0.0
+OilPress                        2.7573946681513917e-07
 OilTemp                         77.0
 OkToReloadTextures              True
-OnPitRoad                       False
-Pitch                           0.0
-PitchRate                       0.0
-PitchRate_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+OnPitRoad                       True
+Pitch                           0.025658506900072098
+PitchRate                       -0.00011094711953774095
+PitchRate_ST                    [-0.00012538560258690268, -0.00012844787852372974, -0.00012909388169646263, -0.00012603850336745381, -0.00011917182564502582, -0.00011094711953774095]
 PitOptRepairLeft                0.0
 PitRepairLeft                   0.0
 PitsOpen                        True
 PitstopActive                   False
 PitSvFlags                      0
-PitSvFuel                       0.0
-PitSvLFP                        0.0
-PitSvLRP                        0.0
-PitSvRFP                        0.0
-PitSvRRP                        0.0
+PitSvFuel                       6.0
+PitSvLFP                        172.2790069580078
+PitSvLRP                        172.2790069580078
+PitSvRFP                        172.2790069580078
+PitSvRRP                        172.2790069580078
 PlayerCarClassPosition          0
 PlayerCarDriverIncidentCount    0
-PlayerCarIdx                    6
-PlayerCarInPitStall             False
+PlayerCarIdx                    27
+PlayerCarInPitStall             True
 PlayerCarMyIncidentCount        0
 PlayerCarPitSvStatus            0
 PlayerCarPosition               0
@@ -1346,63 +3857,63 @@ PlayerCarPowerAdjust            0.0
 PlayerCarTeamIncidentCount      0
 PlayerCarTowTime                0.0
 PlayerCarWeightPenalty          0.0
-PlayerTrackSurface              -1
-PlayerTrackSurfaceMaterial      -1
+PlayerTrackSurface              1
+PlayerTrackSurfaceMaterial      5
 PushToPass                      False
-RaceLaps                        2
+RaceLaps                        5
 RadioTransmitCarIdx             -1
 RadioTransmitFrequencyIdx       0
 RadioTransmitRadioIdx           0
-RelativeHumidity                0.5087920427322388
-ReplayFrameNum                  21854
-ReplayFrameNumEnd               1
+RelativeHumidity                0.48935866355895996
+ReplayFrameNum                  142286
+ReplayFrameNumEnd               1202
 ReplayPlaySlowMotion            False
 ReplayPlaySpeed                 1
 ReplaySessionNum                0
-ReplaySessionTime               2951.27322591146
-RFbrakeLinePress                0.0
-RFcoldPressure                  165.38783264160156
-RFshockDefl                     0.024955183267593384
-RFshockDefl_ST                  [0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384, 0.024955183267593384]
-RFshockVel                      0.0
-RFshockVel_ST                   [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-RFtempCL                        76.56478881835938
-RFtempCM                        76.56478881835938
-RFtempCR                        76.56478881835938
+ReplaySessionTime               3874.3431477864588
+RFbrakeLinePress                80.24095916748047
+RFcoldPressure                  172.2790069580078
+RFshockDefl                     0.05218159407377243
+RFshockDefl_ST                  [0.052187010645866394, 0.052185848355293274, 0.05218490585684776, 0.05218340829014778, 0.05218251049518585, 0.05218159407377243]
+RFshockVel                      -0.0002910789626184851
+RFshockVel_ST                   [-0.00024050089996308088, -0.00035578434471972287, -0.0004593468038365245, -0.0004915299359709024, -0.0003077319706790149, -0.0002910789626184851]
+RFtempCL                        76.56777954101562
+RFtempCM                        76.56777954101562
+RFtempCR                        76.56777954101562
 RFwearL                         1.0
 RFwearM                         1.0
 RFwearR                         1.0
-Roll                            0.0
-RollRate                        0.0
-RollRate_ST                     [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Roll                            -0.02770981378853321
+RollRate                        0.00028001944883726537
+RollRate_ST                     [0.00019738852279260755, 0.00018762267427518964, 0.00019076433090958744, 0.0002082805149257183, 0.00024049753847066313, 0.00028001944883726537]
 RPM                             300.0
-RRbrakeLinePress                0.0
-RRcoldPressure                  165.38783264160156
-RRshockDefl                     0.08064910769462585
-RRshockDefl_ST                  [0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585, 0.08064910769462585]
-RRshockVel                      0.0
-RRshockVel_ST                   [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-RRtempCL                        76.58074951171875
-RRtempCM                        76.58074951171875
-RRtempCR                        76.58074951171875
+RRbrakeLinePress                93.25300598144531
+RRcoldPressure                  172.2790069580078
+RRshockDefl                     0.05755418911576271
+RRshockDefl_ST                  [0.05755621939897537, 0.0575527586042881, 0.0575513020157814, 0.05755075067281723, 0.05755196139216423, 0.05755418911576271]
+RRshockVel                      0.0008261290495283902
+RRshockVel_ST                   [-0.0012983493506908417, -0.0008886905270628631, -0.0004224733856972307, 9.588808461558074e-05, 0.0005923250573687255, 0.0008261290495283902]
+RRtempCL                        76.583740234375
+RRtempCM                        76.583740234375
+RRtempCR                        76.583740234375
 RRwearL                         1.0
 RRwearM                         1.0
 RRwearR                         1.0
-SessionFlags                    268435456
+SessionFlags                    268697600
 SessionLapsRemain               32767
 SessionLapsRemainEx             32767
 SessionNum                      0
 SessionState                    4
-SessionTick                     59498
-SessionTime                     2952.2832356817307
-SessionTimeOfDay                84972.0
-SessionTimeRemain               18647.733430984936
+SessionTick                     158541
+SessionTime                     3895.3667155178164
+SessionTimeOfDay                68695.0
+SessionTimeRemain               3304.64995114885
 SessionUniqueID                 1
 ShiftGrindRPM                   0.0
 ShiftIndicatorPct               0.0
 ShiftPowerPct                   0.0
 Skies                           2
-Speed                           0.0
+Speed                           0.001970697659999132
 SteeringWheelAngle              0.0
 SteeringWheelAngleMax           9.544707298278809
 SteeringWheelPctDamper          0.0
@@ -1410,31 +3921,31 @@ SteeringWheelPctTorque          0.0
 SteeringWheelPctTorqueSign      0.0
 SteeringWheelPctTorqueSignStops 0.0
 SteeringWheelPeakForceNm        -1.0
-SteeringWheelTorque             6.827625838923268e-06
-SteeringWheelTorque_ST          [6.827625838923268e-06, 6.827625838923268e-06, 6.827625838923268e-06, 6.827625838923268e-06, 6.827625838923268e-06, 6.827625838923268e-06]
+SteeringWheelTorque             0.4645131528377533
+SteeringWheelTorque_ST          [0.466851145029068, 0.46652063727378845, 0.4659300446510315, 0.4655095636844635, 0.464413583278656, 0.4645131528377533]
 Throttle                        0.0
 ThrottleRaw                     0.0
 TireLF_RumblePitch              0.0
 TireLR_RumblePitch              0.0
 TireRF_RumblePitch              0.0
 TireRR_RumblePitch              0.0
-TrackTemp                       18.333343505859375
-TrackTempCrew                   18.333343505859375
-VelocityX                       0.0
-VelocityX_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-VelocityY                       0.0
-VelocityY_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-VelocityZ                       0.0
-VelocityZ_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-VertAccel                       0.0
-VertAccel_ST                    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Voltage                         13.40000057220459
+TrackTemp                       19.4444580078125
+TrackTempCrew                   19.4444580078125
+VelocityX                       -0.0015907322522252798
+VelocityX_ST                    [-0.0015676971524953842, -0.0015711989253759384, -0.00157455843873322, -0.0015774868661537766, -0.001583385863341391, -0.0015907322522252798]
+VelocityY                       0.0011632799869403243
+VelocityY_ST                    [0.0012013900559395552, 0.001193493721075356, 0.0011852398747578263, 0.0011773741571232677, 0.0011694002896547318, 0.0011632799869403243]
+VelocityZ                       -0.0012611171696335077
+VelocityZ_ST                    [-0.001436689286492765, -0.0014093704521656036, -0.0013803549809381366, -0.0013468923280015588, -0.0013051911955699325, -0.0012611171696335077]
+VertAccel                       9.81552505493164
+VertAccel_ST                    [9.809408187866211, 9.809494972229004, 9.810100555419922, 9.811705589294434, 9.814671516418457, 9.81552505493164]
+Voltage                         0.0
 WaterLevel                      22.0
 WaterTemp                       77.0
 WeatherType                     1
-WindDir                         3.8504977226257324
-WindVel                         4.46628999710083
-Yaw                             0.0
-YawNorth                        0.0
-YawRate                         0.0
-YawRate_ST                      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+WindDir                         3.8182263374328613
+WindVel                         3.449126958847046
+Yaw                             -2.3717734813690186
+YawNorth                        3.9163384437561035
+YawRate                         -2.482103263901081e-05
+YawRate_ST                      [-4.383251507533714e-05, -4.1468822018941864e-05, -3.8152371416799724e-05, -3.4243406844325364e-05, -2.8406364435795695e-05, -2.482103263901081e-05]
