@@ -13,11 +13,13 @@ class Telemetry(QThread):
         self.ir_connected = False
         self.last_car_setup_tick = -1
         self.timeout = 0.25
-        self.weekend_info_update_rate = 60
-        self.session_info_update_rate = 10
-        self.weather_info_update_rate = 60
-        self.driver_info_update_rate = 10
-        self.pit_settings_info_update_rate = 10
+        self.weekend_update_rate = 60
+        self.session_update_rate = 30
+        self.weather_update_rate = 30
+        self.driver_update_rate = 10
+        self.drivers_update_rate = 20
+        self.carsetup_update_rate = 5
+        self.pitstop_update_rate = 5
         self.data = None
 
     def run(self):
@@ -27,11 +29,11 @@ class Telemetry(QThread):
                 self.last_car_setup_tick = -1
                 self.ir.shutdown()
                 self.data = None
-                self.signal.emit({"pyirsdk" : "shutdown"})
+                self.signal.emit({"type": "pyirsdk", "status" : "disconnected"})
             elif not self.ir_connected and self.ir.startup() and self.ir.is_initialized and self.ir.is_connected:
                 self.ir_connected = True
                 self.data = None
-                self.signal.emit({"pyirsdk" : "connected"})
+                self.signal.emit({"type": "pyirsdk", "status" : "connected"})
             
             if self.ir_connected:
                 self.ir.freeze_var_buffer_latest()
@@ -44,149 +46,169 @@ class Telemetry(QThread):
         if self.data == None:
             self.data ={}
         
-        self.update_weekend_info()
-        self.update_session_info()
-        self.update_weather_info()
-        self.update_driver_info()
-        self.update_pit_settings_info()
+        self.update_weekend()
+        self.update_session()
+        self.update_weather()
+        self.update_carsetup()
+        self.update_pitstop()
+        self.update_driver()
+        self.update_drivers()
 
-    def update_weekend_info(self):
+    def update_weekend(self):
         timestamp = int(self.ir['SessionTime'])
         session_id = self.ir['WeekendInfo']['SessionID']
         sub_session_id = self.ir['WeekendInfo']['SubSessionID']
         
-        if 'weekend_info' not in self.data:
-            self.data['weekend_info'] = {}
+        if 'weekend' not in self.data:
+            self.data['weekend'] = {}
 
-        if 'weekend_info_timestamp' not in self.data:
-            self.data['weekend_info_timestamp'] = 0
+        if 'weekend_timestamp' not in self.data:
+            self.data['weekend_timestamp'] = 0
 
-        if self.data['weekend_info_timestamp'] + self.weekend_info_update_rate < timestamp:
-            if self.data['weekend_info'] != self.ir['WeekendInfo']:
-                self.signal.emit({
-                        "timestamp": timestamp,
-                        "session_id": session_id,
-                        "sub_session_id": sub_session_id,
-                        "weekend_info": self.data['weekend_info'],
-                        "message": "Weekend -> Track: " + self.ir['WeekendInfo']['TrackDisplayName'] + " (" + self.ir['WeekendInfo']['TrackDisplayShortName'] + "|ID:" + str(self.ir['WeekendInfo']['TrackID']) + ") | WeatherType: " + self.ir['WeekendInfo']['TrackWeatherType'] + " | TrackSkies: " + self.ir['WeekendInfo']['TrackSkies'] + " | TrackCleanup: " + ("Yes" if self.ir['WeekendInfo']['TrackCleanup'] == 1 else "No")
-                    })
-                self.data['weekend_info'] = self.ir['WeekendInfo']
-                self.data['weekend_info_timestamp'] = timestamp
-
-    def update_session_info(self):
-        timestamp = int(self.ir['SessionTime'])
-        session_id = self.ir['WeekendInfo']['SessionID']
-        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
-        
-        if 'session_info' not in self.data:
-            self.data['session_info'] = {}
-
-        if 'session_info_timestamp' not in self.data:
-            self.data['session_info_timestamp'] = 0
-
-        if self.data['session_info_timestamp'] + self.session_info_update_rate < timestamp:
-            if self.data['session_info'] != self.ir['SessionInfo']:
-                message = "Session ->"
-                for session in self.ir['SessionInfo']['Sessions']:
-                    message += " Type: " + session['SessionType'] + " (" + str(session['SessionNum']) + ") |"
-                    message += " TrackRubberState: " + session['SessionTrackRubberState'] + " |"
-                    message += " FastestLap: " + str(session['ResultsFastestLap'])
-
-                self.signal.emit({
-                        "timestamp": timestamp,
-                        "session_id": session_id,
-                        "sub_session_id": sub_session_id,
-                        "session_info": self.ir['SessionInfo'],
-                        "message": message
-                    })
-                self.data['session_info'] = self.ir['SessionInfo']
-                self.data['session_info_timestamp'] = timestamp
-
-    def update_weather_info(self):
-        timestamp = int(self.ir['SessionTime'])
-        session_id = self.ir['WeekendInfo']['SessionID']
-        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
-        
-        if 'weather_info' not in self.data:
-            self.data['weather_info'] = {}
-
-        if 'weather_info_timestamp' not in self.data:
-            self.data['weather_info_timestamp'] = 0
-        
-        if self.data['weather_info_timestamp'] + self.weather_info_update_rate < timestamp:
-            wi = dict()
-            wi['AirTemp'] = round(self.ir['AirTemp'], 1)
-            wi['TrackTemp'] = round(self.ir['TrackTemp'], 1)
-            wi['TrackTempCrew'] = round(self.ir['TrackTempCrew'], 1)
-            wi['Skies'] = self.ir['Skies']
-            wi['WeatherType'] = self.ir['WeatherType']
-            wi['FogLevel'] = round(self.ir['FogLevel'], 1)
-            wi['RelativeHumidity'] = round(self.ir['RelativeHumidity'], 1)
-            wi['WindDir'] = round(self.ir['WindDir'], 1)
-            wi['WindVel'] = round(self.ir['WindVel'], 1)
-            
-            if self.data['weather_info'] != wi:
-                self.data['weather_info'] = wi
-                self.data['weather_info_timestamp'] = timestamp
+        if self.data['weekend_timestamp'] + self.weekend_update_rate < timestamp:
+            if self.data['weekend'] != self.ir['WeekendInfo']:
                 self.signal.emit({
                     "timestamp": timestamp,
                     "session_id": session_id,
                     "sub_session_id": sub_session_id,
-                    "weather_info": self.data['weather_info'],
-                    "message": "Weather -> Air:" + str(wi['AirTemp']) + "C | Track:" + str(wi['TrackTemp']) + "C | TrackCrew:" +  str(wi['TrackTempCrew']) + "C | Wind:" + str(wi['WindVel']) + "m/sec | WindDir:" + str(wi['WindDir'])
+                    "type": "weekend",
+                    "data": {
+                        "weekend": self.ir['WeekendInfo']
+                    }
                 })
-                
-    def update_driver_info(self):
+                self.data['weekend'] = self.ir['WeekendInfo']
+                self.data['weekend_timestamp'] = timestamp
+
+    def update_session(self):
         timestamp = int(self.ir['SessionTime'])
         session_id = self.ir['WeekendInfo']['SessionID']
         sub_session_id = self.ir['WeekendInfo']['SubSessionID']
-        driver_user_id = self.ir['DriverInfo']['DriverUserID']
-        driver_car_idx = self.ir['DriverInfo']['DriverCarIdx']
+        
+        if 'session' not in self.data:
+            self.data['session'] = {}
 
-        if 'drivers_info' not in self.data:
-            self.data['drivers_info'] = []
+        if 'session_timestamp' not in self.data:
+            self.data['session_timestamp'] = 0
 
-        if 'drivers_info_timestamp' not in self.data:
-            self.data['drivers_info_timestamp'] = 0
+        if self.data['session_timestamp'] + self.session_update_rate < timestamp:
+            if self.data['session'] != self.ir['SessionInfo']:
+                self.signal.emit({
+                    "timestamp": timestamp,
+                    "session_id": session_id,
+                    "sub_session_id": sub_session_id,
+                    "type": "session",
+                    "data": {
+                        "session": self.ir['SessionInfo']
+                    }
+                })
+                self.data['session'] = self.ir['SessionInfo']
+                self.data['session_timestamp'] = timestamp
 
-        if self.data['drivers_info_timestamp'] + self.driver_info_update_rate < timestamp:
+    def update_weather(self):
+        timestamp = int(self.ir['SessionTime'])
+        session_id = self.ir['WeekendInfo']['SessionID']
+        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
+        
+        if 'weather' not in self.data:
+            self.data['weather'] = {}
+
+        if 'weather_timestamp' not in self.data:
+            self.data['weather_timestamp'] = 0
+        
+        if self.data['weather_timestamp'] + self.weather_update_rate < timestamp:
+            wi = dict()
+            wi_keys = ['AirTemp', 'TrackTemp', 'TrackTempCrew', 'WeatherType', 'Skies', 'FogLevel', 'RelativeHumidity', 'WindDir', 'WindVel']
+
+            for key in wi_keys:
+                try:
+                    val = self.ir[key]
+                except KeyError:
+                    wi[key] = None
+                    continue
+                
+                if type(val) == str:
+                    wi[key] = val
+                elif type(val) == int:
+                    wi[key] = val
+                elif type(val) == float:
+                    wi[key] = round(val, 1)
+                else:
+                    wi[key] = None
+            
+            if self.data['weather'] != wi:
+                self.signal.emit({
+                    "timestamp": timestamp,
+                    "session_id": session_id,
+                    "sub_session_id": sub_session_id,
+                    "type": "weather",
+                    "data": {
+                        "weather": wi
+                    }
+                })
+                self.data['weather'] = wi
+                self.data['weather_timestamp'] = timestamp
+    
+    def update_driver(self):
+        timestamp = int(self.ir['SessionTime'])
+        session_id = self.ir['WeekendInfo']['SessionID']
+        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
+
+        if 'driver' not in self.data:
+            self.data['driver'] = []
+
+        if 'driver_timestamp' not in self.data:
+            self.data['driver_timestamp'] = 0
+
+        if self.data['driver_timestamp'] + self.driver_update_rate < timestamp:
+            driver = dict()
+            driver_keys = ['DriverUserID', 'DriverCarIdx', 'DriverCarIdx', 'DriverUserID', 'PaceCarIdx', 'DriverCarIdleRPM',
+            'DriverCarRedLine', 'DriverCarEngCylinderCount', 'DriverCarFuelKgPerLtr', 'DriverCarFuelMaxLtr', 'DriverCarMaxFuelPct',
+            'DriverCarSLFirstRPM', 'DriverCarSLShiftRPM', 'DriverCarSLLastRPM', 'DriverCarSLBlinkRPM', 'DriverCarVersion', 'DriverPitTrkPct',
+            'DriverCarEstLapTime', 'DriverSetupName', 'DriverSetupIsModified', 'DriverSetupLoadTypeName', 'DriverSetupPassedTech', 'DriverIncidentCount']
+
+            for key in driver_keys:
+                try:
+                    driver[key] = self.ir['DriverInfo'][key]
+                except KeyError:
+                    driver[key] = None
+            if self.data['driver'] != driver:
+                self.signal.emit({
+                    "timestamp": timestamp,
+                    "session_id": session_id,
+                    "sub_session_id": sub_session_id,
+                    "type": "driver",
+                    "data": {
+                        "driver": driver
+                    }
+                })
+                self.data['driver'] = driver
+                self.data['driver_timestamp'] = timestamp
+
+    def update_drivers(self):
+        timestamp = int(self.ir['SessionTime'])
+        session_id = self.ir['WeekendInfo']['SessionID']
+        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
+
+        if 'drivers' not in self.data:
+            self.data['drivers'] = []
+
+        if 'drivers_timestamp' not in self.data:
+            self.data['drivers_timestamp'] = 0
+
+        if self.data['drivers_timestamp'] + self.drivers_update_rate < timestamp:
             drivers = []
+
             for driver in self.ir['DriverInfo']['Drivers']:
                 if driver['CarIsPaceCar'] == 0 and driver['CarIsAI'] == 0:
-                    d = dict()
-                    d['CarIdx'] = driver['CarIdx']
-                    d['UserName'] = driver['UserName']
-                    d['UserID'] = driver['UserID']
-                    d['TeamID'] = driver['TeamID']
-                    d['TeamName'] = driver['TeamName']
-                    d['CarNumber'] = driver['CarNumber']
-                    d['CarNumberRaw'] = driver['CarNumberRaw']
-                    d['CarPath'] = driver['CarPath']
-                    d['CarClassID'] = driver['CarClassID']
-                    d['CarID'] = driver['CarID']
-                    d['CarScreenName'] = driver['CarScreenName']
-                    d['CarScreenNameShort'] = driver['CarScreenNameShort']
-                    d['CarClassShortName'] = driver['CarClassShortName']
-                    d['CarClassRelSpeed'] = driver['CarClassRelSpeed']
-                    d['CarClassLicenseLevel'] = driver['CarClassLicenseLevel']
-                    d['CarClassMaxFuelPct'] = driver['CarClassMaxFuelPct']
-                    d['CarClassWeightPenalty'] = driver['CarClassWeightPenalty']
-                    d['CarClassPowerAdjust'] = driver['CarClassPowerAdjust']
-                    d['IRating'] = driver['IRating']
-                    d['LicLevel'] = driver['LicLevel']
-                    d['LicSubLevel'] = driver['LicSubLevel']
-                    d['LicString'] = driver['LicString']
-                    d['IsSpectator'] = driver['IsSpectator']
-                    d['ClubName'] = driver['ClubName']
-                    d['DivisionName'] = driver['DivisionName']
-                    d['CurDriverIncidentCount'] = driver['CurDriverIncidentCount']
-                    d['TeamIncidentCount'] = driver['TeamIncidentCount']
-                    drivers.append(d)
+                    dr = dict()
+                    for key, val in driver.items():
+                        dr[key] = val
+                    drivers.append(dr)
             
-            if self.data['drivers_info'] != drivers:
+            if self.data['drivers'] != drivers:
                 for i in drivers:
                     found = False
-                    for j in self.data['drivers_info']:
+                    for j in self.data['drivers']:
                         if i == j:
                             found = True
                             break
@@ -195,16 +217,79 @@ class Telemetry(QThread):
                             "timestamp": timestamp,
                             "session_id": session_id,
                             "sub_session_id": sub_session_id,
-                            "driver_user_id": driver_user_id,
-                            "driver_car_idx": driver_car_idx,
-                            "driver_info": i,
-                            "message": "Driver -> CarIdx: " + str(i['CarIdx']) + " | UserName: " + i['UserName'] + " (ID:" + str(i['UserID']) +"|iRating:" + str(i['IRating']) + ") | Team: " + i['TeamName'] + " (ID:" + str(i['TeamID']) + ") | Car: " + i['CarScreenName']
+                            "type": "drivers",
+                            "data": {
+                                "drivers": i
+                            }
                         })
-                self.data['drivers_info'] = drivers
-                self.data['drivers_info_timestamp'] = timestamp
+                self.data['drivers'] = drivers
+                self.data['drivers_timestamp'] = timestamp
+
+    def update_carsetup(self):
+        timestamp = int(self.ir['SessionTime'])
+        session_id = self.ir['WeekendInfo']['SessionID']
+        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
+        
+        if 'carsetup' not in self.data:
+            self.data['carsetup'] = {}
+
+        if 'carsetup_timestamp' not in self.data:
+            self.data['carsetup_timestamp'] = 0
+
+        if self.data['carsetup_timestamp'] + self.carsetup_update_rate < timestamp:
+            if self.data['carsetup'] != self.ir['CarSetup']:
+                self.signal.emit({
+                    "timestamp": timestamp,
+                    "session_id": session_id,
+                    "sub_session_id": sub_session_id,
+                    "type": "carsetup",
+                    "data": {
+                        "carsetup": self.ir['CarSetup']
+                    }
+                })
+                self.data['carsetup'] = self.ir['CarSetup']
+                self.data['carsetup_timestamp'] = timestamp
+
+    def update_pitstop(self):
+        timestamp = int(self.ir['SessionTime'])
+        session_id = self.ir['WeekendInfo']['SessionID']
+        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
+        
+        if 'pitstop' not in self.data:
+            self.data['pitstop'] = {}
+
+        if 'pitstop_timestamp' not in self.data:
+            self.data['pitstop_timestamp'] = 0
+        
+        if self.data['pitstop_timestamp'] + self.pitstop_update_rate < timestamp:
+            ps = dict()
+            ps_keys = ['dpFastRepair', 'dpFuelAddKg', 'dpFuelFill', 'dpLFTireChange', 'dpLFTireColdPress', 'dpRFTireChange',
+            'dpRFTireColdPress', 'dpLRTireChange', 'dpLRTireColdPress', 'dpRRTireChange', 'dpRRTireColdPress', 'dpWindshieldTearoff']
+            
+            for key in ps_keys:
+                try:
+                    val = self.ir[key]
+                except KeyError:
+                    ps[key] = None
+                    continue
+                ps[key] = int(val)            
+
+            if self.data['pitstop'] != ps:
+                self.signal.emit({
+                    "timestamp": timestamp,
+                    "session_id": session_id,
+                    "sub_session_id": sub_session_id,
+                    "type": "pitstop",
+                    "data": {
+                        "pitstop": ps
+                    }
+                })
+                self.data['pitstop'] = ps
+                self.data['pitstop_timestamp'] = timestamp
+
 
     
-    # def update_cars_on_track_info(self):
+    # def update_cars_on_track_(self):
     #     timestamp = self.ir['SessionTime']
     #     session_id = self.ir['WeekendInfo']['SessionID']
     #     sub_session_id = self.ir['WeekendInfo']['SubSessionID']
@@ -214,43 +299,6 @@ class Telemetry(QThread):
     #     td['CarIdxLap'] = self.ir['CarIdxLap']
     #     td['CarIdxLapCompleted'] = self.ir['CarIdxLapCompleted']
     #     td['CarIdxOnPitRoad'] = self.ir['CarIdxOnPitRoad']
-
-    def update_pit_settings_info(self):
-        timestamp = int(self.ir['SessionTime'])
-        session_id = self.ir['WeekendInfo']['SessionID']
-        sub_session_id = self.ir['WeekendInfo']['SubSessionID']
-        
-        if 'pit_settings_info' not in self.data:
-            self.data['pit_settings_info'] = {}
-
-        if 'pit_settings_info_timestamp' not in self.data:
-            self.data['pit_settings_info_timestamp'] = 0
-        
-        if self.data['pit_settings_info_timestamp'] + self.pit_settings_info_update_rate < timestamp:
-            dp = dict()
-            dp['dpFastRepair'] = int(self.ir['dpFastRepair'])
-            dp['dpFuelAddKg'] = int(self.ir['dpFuelAddKg'])
-            dp['dpFuelFill'] = int(self.ir['dpFuelFill'])
-            dp['dpLFTireChange'] = int(self.ir['dpLFTireChange'])
-            dp['dpLFTireColdPress'] = int(self.ir['dpLFTireColdPress'])
-            dp['dpRFTireChange'] = int(self.ir['dpRFTireChange'])
-            dp['dpRFTireColdPress'] = int(self.ir['dpRFTireColdPress'])
-            dp['dpLRTireChange'] = int(self.ir['dpLRTireChange'])
-            dp['dpLRTireColdPress'] = int(self.ir['dpLRTireColdPress'])
-            dp['dpRRTireChange'] = int(self.ir['dpRRTireChange'])
-            dp['dpRRTireColdPress'] = int(self.ir['dpRRTireColdPress'])
-            dp['dpWindshieldTearoff'] = int(self.ir['dpWindshieldTearoff'])
-
-            if self.data['pit_settings_info'] != dp:
-                self.signal.emit({
-                    "timestamp": timestamp,
-                    "session_id": session_id,
-                    "sub_session_id": sub_session_id,
-                    "pit_settings_info": dp,
-                    "message": "PitSettings -> FastRepair: " + str(dp['dpFastRepair']) + "|Fuel(kg): " + str(dp['dpFuelAddKg']) + "|FuelFill: " + str(dp['dpFuelFill']) + "|TireChange(LF/RF/LR/RR): " + str(dp['dpLFTireChange']) + "/" + str(dp['dpRFTireChange']) + "/" + str(dp['dpLRTireChange']) + "/" + str(dp['dpRRTireChange']) + "|TireChange(LF/RF/LR/RR): " + str(dp['dpLFTireColdPress']) + "/" + str(dp['dpRFTireColdPress']) + "/" + str(dp['dpLRTireColdPress']) + "/" + str(dp['dpRRTireColdPress'])
-                    })
-                self.data['pit_settings_info'] = dp
-                self.data['pit_settings_info_timestamp'] = timestamp
 
 
 

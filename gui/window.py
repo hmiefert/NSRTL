@@ -2,9 +2,9 @@ from datetime import datetime
 from PyQt5.QtWidgets import QMainWindow, QWidget, QTextEdit, QSystemTrayIcon, QAction, QStyle, qApp, QMenu
 from PyQt5.QtCore import QRect, QSize
 from PyQt5.QtGui import QPixmap, QIcon
-# from svc.database import JsonStorage
 from svc.telemetry import Telemetry
 from svc.wsclient import WSClient
+from time import sleep
 import res.newman_res
 
 class MainWindow(QMainWindow):
@@ -13,19 +13,14 @@ class MainWindow(QMainWindow):
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
  
-        self.setMinimumSize(QSize(1200, 800))
-        self.setMaximumSize(QSize(1200, 800))
-        self.setWindowTitle("Newman-Simracing Telemetry-Logger")
+        self.setMinimumSize(QSize(400, 800))
+        self.setMaximumSize(QSize(400, 800))
+        self.setWindowTitle("NSRTL")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
-        self.textEdit_session_info = QTextEdit(central_widget)
-        self.textEdit_session_info.setGeometry(QRect(0, 0, 1200, 250))
-        self.textEdit_session_info.setObjectName("textEdit_session_info")
-        self.textEdit_session_info.setReadOnly(True)
-
         self.textEdit_debug = QTextEdit(central_widget)
-        self.textEdit_debug.setGeometry(QRect(0, 250, 1200, 550))
+        self.textEdit_debug.setGeometry(QRect(0, 0, 400, 800))
         self.textEdit_debug.setObjectName("textEdit_debug")
         self.textEdit_debug.setReadOnly(True)
 
@@ -44,17 +39,18 @@ class MainWindow(QMainWindow):
         tray_menu.addAction(quit_action)
 
         self.ws = WSClient(self)
-        self.ws.websocket_url = "ws://localhost:8080"
+        self.ws.websocket_url = "wss://api.hmiefert.de:42443"
         self.ws.websocket_token = "aVerySecureToken"
-        # self.db = JsonStorage()
 
         self.ir_thread = Telemetry()
         self.ir_thread.timeout = 0.25
-        self.ir_thread.weekend_info_update_rate = 60
-        self.ir_thread.session_info_update_rate = 10
-        self.ir_thread.weather_info_update_rate = 60
-        self.ir_thread.drivers_info_update_rate = 10
-        self.ir_thread.pit_settings_info_update_rate = 10
+        self.ir_thread.weekend_update_rate = 60
+        self.ir_thread.session_update_rate = 30
+        self.ir_thread.weather_update_rate = 30
+        self.ir_thread.driver_update_rate = 10
+        self.ir_thread.drivers_update_rate = 20
+        self.ir_thread.carsetup_update_rate = 5
+        self.ir_thread.pitstop_update_rate = 5
         self.ir_thread.signal.connect(self.recieve_signal)
         self.ir_thread.start()
 
@@ -64,37 +60,48 @@ class MainWindow(QMainWindow):
     def recieve_signal(self, signal):
         now = datetime.now()
         fnow = now.strftime("%Y-%m-%d %H:%M:%S")
-        
-        if 'pyirsdk' in signal:
-            self.textEdit_debug.append(fnow + ": Telemetry Status -> " + signal['pyirsdk'])
+        if signal['type'] == 'pyirsdk':
+            self.textEdit_debug.append(fnow + ": Telemetry status -> " + signal['status'])
+            if signal['status'] == "connected":
+                self.ws.telemetry_connected = True
+            else:
+                self.ws.telemetry_connected = False
 
-        if 'weekend_info' in signal:
-            self.textEdit_debug.append(fnow + ": " + signal['message'])
-            # self.db.insert_weekend_info(signal)
+        if signal['type'] == 'weekend':
+            self.textEdit_debug.append(fnow + ": Weekend data updated")
             self.ws.queue_message(signal)
             
-        if 'session_info' in signal:
-            self.textEdit_debug.append(fnow + ": " + signal['message'])
-            # self.db.insert_session_info(signal)
+        if signal['type'] == 'session':
+            self.textEdit_debug.append(fnow + ": Session data updated")
             self.ws.queue_message(signal)
 
-        if 'weather_info' in signal:
-            self.textEdit_debug.append(fnow + ": " + signal['message'])
-            # self.db.insert_weather_info(signal)
+        if signal['type'] == 'weather':
+            self.textEdit_debug.append(fnow + ": Weather data updated")
             self.ws.queue_message(signal)
 
-        if 'driver_info' in signal:
-            self.textEdit_debug.append(fnow + ": " + signal['message'])
-            # self.db.insert_driver_info(signal)
+        if signal['type'] == 'driver':
+            self.textEdit_debug.append(fnow + ": Driver data updated")
             self.ws.queue_message(signal)
 
-        if 'pit_settings_info' in signal:
-            self.textEdit_debug.append(fnow + ": " + signal['message'])
-            # self.db.insert_pit_settings_info(signal)
+        if signal['type'] == 'drivers':
+            self.textEdit_debug.append(fnow + ": Drivers data updated")
+            self.ws.queue_message(signal)
+
+        if signal['type'] == 'carsetup':
+            self.textEdit_debug.append(fnow + ": CarSetup data updated")
+            self.ws.queue_message(signal)
+
+        if signal['type'] == 'pitstop':
+            self.textEdit_debug.append(fnow + ": PitStop data updated")
             self.ws.queue_message(signal)
 
         self.textEdit_debug.verticalScrollBar().setValue(self.textEdit_debug.verticalScrollBar().maximum())
 
     def closeEvent(self, event):
+        self.ws.is_connected == False
+        self.ws.client.close()
+
+        self.ir_thread.ir.shutdown()
+        
         event.ignore()
         self.hide()

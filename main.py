@@ -27,5 +27,7 @@ if __name__ == "__main__":
         mw.ws.websocket_url = nsrtl_url[0]
         mw.ws.websocket_token = nsrtl_token[0]
 
+    # mw.show()
+    print(os.getcwd())
     mw.close()
     sys.exit(app.exec())

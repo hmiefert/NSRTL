@@ -133,3 +133,6 @@ dmypy.json
 
 # telemetry data
 data/*.json
+
+# certs
+certs/  
