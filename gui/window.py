@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         tray_menu.addAction(quit_action)
 
         self.ws = WSClient(self)
-        self.ws.websocket_url = "wss://api.hmiefert.de:42443"
+        self.ws.websocket_url = "wss://localhost:8081"
         self.ws.websocket_token = "aVerySecureToken"
 
         self.ir_thread = Telemetry()

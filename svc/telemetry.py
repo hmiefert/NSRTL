@@ -15,7 +15,7 @@ class Telemetry(QThread):
         self.timeout = 0.25
         self.weekend_update_rate = 60
         self.session_update_rate = 30
-        self.weather_update_rate = 30
+        self.weather_update_rate = 60
         self.driver_update_rate = 10
         self.drivers_update_rate = 20
         self.carsetup_update_rate = 5
@@ -237,7 +237,16 @@ class Telemetry(QThread):
             self.data['carsetup_timestamp'] = 0
 
         if self.data['carsetup_timestamp'] + self.carsetup_update_rate < timestamp:
-            if self.data['carsetup'] != self.ir['CarSetup']:
+            # need to compare copy, as UpdateCount is worthless..
+            car_setup_1 = dict(self.ir['CarSetup'])
+            car_setup_2 = self.data['carsetup']
+            
+            car_setup_1.pop('UpdateCount', None)
+            if dict(self.data['carsetup']) != None:
+                car_setup_2 = dict(self.data['carsetup'])                
+                car_setup_2.pop('UpdateCount', None)
+            
+            if car_setup_1 != car_setup_2:
                 self.signal.emit({
                     "timestamp": timestamp,
                     "session_id": session_id,

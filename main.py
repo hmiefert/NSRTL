@@ -21,8 +21,8 @@ if __name__ == "__main__":
         nsrtl_url = reg.QueryValueEx(nsrtl, 'URL')
         nsrtl_token = reg.QueryValueEx(nsrtl, 'TOKEN')
     except FileNotFoundError:
-        nsrtl_url = ''
-        nsrtl_token = ''
+        nsrtl_url = 'wss://localhost:8081'
+        nsrtl_token = 'aVerySecureToken'
     else:
         mw.ws.websocket_url = nsrtl_url[0]
         mw.ws.websocket_token = nsrtl_token[0]

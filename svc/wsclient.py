@@ -10,6 +10,7 @@ class WSClient(QObject):
         self.client = QWebSocket("", QWebSocketProtocol.Version13, None)        
         self.client.error.connect(self.onError)
         self.client.connected.connect(self.onConnected)
+        self.client.disconnected.connect(self.onDisconnected)
         self.ssl_config = QSslConfiguration()
         self.ssl_cert_file = QFile(":certs/server.pem")
         self.ssl_cert_file.open(QIODevice.ReadOnly)
@@ -19,7 +20,7 @@ class WSClient(QObject):
         self.message_queue = []
         self.is_connected = False
         self.telemetry_connected = False
-        self.websocket_url = "wss://api.hmiefert.de:42443"
+        self.websocket_url = "wss://localhost:8081"
         self.websocket_token = "aVerySecureToken"
         
         self.timer_connection_watchdog = QTimer(parent)
@@ -31,13 +32,19 @@ class WSClient(QObject):
         self.timer_reconnect.timeout.connect(self.send_message)
 
     def onConnected(self):
-        print("WebSocket: connected")
+        # print("WebSocket: connected")
         self.is_connected = True
 
-    def onError(self):
-        print("WebSocket: error -> " + self.client.errorString())
+    def onDisconnected(self):
+        # print("WebSocket: disconnected -> " + self.client.errorString())
         self.is_connected = False
         self.client.abort()
+    
+    def onError(self):
+        # print("WebSocket: error -> " + self.client.errorString())
+        self.is_connected = False
+        self.client.abort()
+    
 
     def queue_message(self, message):
         self.message_queue.append(message)
@@ -51,9 +58,9 @@ class WSClient(QObject):
 
     def connection_watchdog(self):
         if self.is_connected == False and self.telemetry_connected == True:
-            print("WebSocket: connecting to -> " + self.websocket_url)
+            # print("WebSocket: connecting to -> " + self.websocket_url)
             c = self.client.open(QUrl(self.websocket_url))
         if self.is_connected == True and self.telemetry_connected == False:
-            print("WebSocket: disconnecting from -> " + self.websocket_url)
+            # print("WebSocket: disconnecting from -> " + self.websocket_url)
             self.client.close()
             self.is_connected = False
