@@ -13,14 +13,14 @@ class MainWindow(QMainWindow):
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
  
-        self.setMinimumSize(QSize(400, 800))
-        self.setMaximumSize(QSize(400, 800))
-        self.setWindowTitle("NSRTL")
+        self.setMinimumSize(QSize(600, 800))
+        self.setMaximumSize(QSize(600, 800))
+        self.setWindowTitle("NSRTL [version 0.07")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
         self.textEdit_debug = QTextEdit(central_widget)
-        self.textEdit_debug.setGeometry(QRect(0, 0, 400, 800))
+        self.textEdit_debug.setGeometry(QRect(0, 0, 600, 800))
         self.textEdit_debug.setObjectName("textEdit_debug")
         self.textEdit_debug.setReadOnly(True)
 
