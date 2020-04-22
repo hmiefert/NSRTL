@@ -135,4 +135,5 @@ dmypy.json
 data/*.json
 
 # certs
-certs/  
+certs/server_res.py
+certs/server.pem
