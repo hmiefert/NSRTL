@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
  
         self.setMinimumSize(QSize(600, 800))
         self.setMaximumSize(QSize(600, 800))
-        self.setWindowTitle("NSRTL [version 0.11]")
+        self.setWindowTitle("NSRTL [version 0.13]")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
@@ -45,9 +45,9 @@ class MainWindow(QMainWindow):
         self.ir_thread = Telemetry()
         self.ir_thread.timeout = 0.25
         self.ir_thread.weekend_update_rate = 60
-        self.ir_thread.session_update_rate = 30
-        self.ir_thread.weather_update_rate = 30
-        self.ir_thread.driver_update_rate = 10
+        self.ir_thread.session_update_rate = 20
+        self.ir_thread.weather_update_rate = 20
+        self.ir_thread.driver_update_rate = 20
         self.ir_thread.drivers_update_rate = 20
         self.ir_thread.carsetup_update_rate = 5
         self.ir_thread.pitstop_update_rate = 5
@@ -58,8 +58,12 @@ class MainWindow(QMainWindow):
         self.tray_icon.show()
 
     def recieve_signal(self, signal):
-        now = datetime.now()
-        fnow = now.strftime("%Y-%m-%d %H:%M:%S")
+        now = datetime.utcnow()
+        fnow = now.strftime("%Y-%m-%d %H:%M:%S (UTC)")
+
+        if type(signal) == dict:
+            signal['client_time'] = now
+
         if signal['type'] == 'pyirsdk':
             self.textEdit_debug.append(fnow + ": Telemetry status -> " + signal['status'])
             if signal['status'] == "connected":

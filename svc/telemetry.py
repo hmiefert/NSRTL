@@ -12,11 +12,11 @@ class Telemetry(QThread):
         self.ir = IRSDK()
         self.ir_connected = False
         self.last_car_setup_tick = -1
-        self.timeout = 0.25
+        self.timeout = 1.0
         self.weekend_update_rate = 60
-        self.session_update_rate = 30
-        self.weather_update_rate = 60
-        self.driver_update_rate = 10
+        self.session_update_rate = 20
+        self.weather_update_rate = 20
+        self.driver_update_rate = 20
         self.drivers_update_rate = 20
         self.carsetup_update_rate = 5
         self.pitstop_update_rate = 5
@@ -39,7 +39,6 @@ class Telemetry(QThread):
                 self.ir.freeze_var_buffer_latest()
                 self.update()
                 self.ir.unfreeze_var_buffer_latest()
-            
             time.sleep(self.timeout)
     
     def update(self):
@@ -282,7 +281,10 @@ class Telemetry(QThread):
                 except KeyError:
                     ps[key] = None
                     continue
-                ps[key] = int(val)            
+                try:
+                    ps[key] = int(val)
+                except TypeError:
+                    ps[key] = None
 
             if self.data['pitstop'] != ps:
                 self.signal.emit({

@@ -1,6 +1,7 @@
 from PyQt5.QtCore import QObject, QUrl, QTimer, QFile, QIODevice
 from PyQt5.QtNetwork import QSslConfiguration, QSslCertificate
 from PyQt5.QtWebSockets import QWebSocket, QWebSocketProtocol
+from bson import json_util
 from json import dumps
 import certs.server_res
 
@@ -53,8 +54,8 @@ class WSClient(QObject):
         if self.is_connected and len(self.message_queue) > 0:
             message = self.message_queue.pop(0)
             message['token'] = self.websocket_token
-            if self.client.sendTextMessage(dumps(message)) <= 0:
-                self.message_queue.append(message)  
+            if self.client.sendTextMessage(dumps(message, default=json_util.default)) <= 0:
+                self.message_queue.append(message)
 
     def connection_watchdog(self):
         if self.is_connected == False and self.telemetry_connected == True:
