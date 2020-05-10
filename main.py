@@ -9,7 +9,10 @@ import winreg as reg
 if __name__ == "__main__":
     # AutoStart
     key = reg.OpenKey(reg.HKEY_CURRENT_USER, 'Software\Microsoft\Windows\CurrentVersion\Run', 0, reg.KEY_SET_VALUE)
-    reg.SetValueEx(key, 'NSRTL', 0, reg.REG_SZ, os.getcwd() + '\\NSRTL.exe')
+    cwd = os.getcwd()
+    nsrtl_exe = cwd + '\\NSRTL.exe'
+    if os.path.exists(nsrtl_exe):
+        reg.SetValueEx(key, 'NSRTL', 0, reg.REG_SZ, nsrtl_exe)
 
     # APP
     app = QApplication(sys.argv)
@@ -27,7 +30,5 @@ if __name__ == "__main__":
         mw.ws.websocket_url = nsrtl_url[0]
         mw.ws.websocket_token = nsrtl_token[0]
 
-    # mw.show()
-    print(os.getcwd())
     mw.close()
     sys.exit(app.exec())

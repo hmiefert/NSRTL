@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
  
         self.setMinimumSize(QSize(600, 800))
         self.setMaximumSize(QSize(600, 800))
-        self.setWindowTitle("NSRTL [version 0.13]")
+        self.setWindowTitle("NSRTL [version 0.14]")
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
