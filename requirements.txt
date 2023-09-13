@@ -2,7 +2,7 @@ altgraph==0.17
 astroid==2.3.3
 bson==0.5.9
 colorama==0.4.3
-future==0.18.2
+future==0.18.3
 isort==4.3.21
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
